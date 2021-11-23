@@ -16,6 +16,7 @@ body  {
 .col-sm-3 {
   border-radius: 15px;
   height: 99px;
+  margin-left: 20px;
 }
 .one  {
   background-color: var(--red-crayola);
