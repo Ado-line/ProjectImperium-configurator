@@ -10,4 +10,19 @@
 
 body  {
   background-color: var(--astronaut);
+  width: 98%;
+}
+
+.col-sm-3 {
+  border-radius: 15px;
+  height: 99px;
+}
+.one  {
+  background-color: var(--red-crayola);
+}
+.two  {
+  background-color: var(--funky-blue);
+}
+.three  {
+  background-color: var(--ivory);
 }
