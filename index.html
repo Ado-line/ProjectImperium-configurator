@@ -7,15 +7,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <title>Project Imperium - Configurator</title>
+    <script src="js/drag-drop.js"></script>
   </head>
   <body>
     <center>
       <div class=".container">
         <div class="row">
-          <div class="col-sm-3 one">
+          <div class="col-sm-3 one" draggable="true">
             <p>one</p>
           </div>
-          <div class="col-sm-3 two">
+          <div class="col-sm-3 two" id="getData" ondrop="drop(event)" ondragover="allowDrop(event)">
             <p>two</p>
           </div>
           <div class="col-sm-3 three">
