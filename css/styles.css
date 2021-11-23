@@ -1,0 +1,13 @@
+:root {
+  --funky-blue: #212e5e;
+  --astronaut: #2b3d7b;
+  --oxford-blue: #0E1428;
+  --dim-gray:  #626267;
+  --ivory: #FFFFEE;
+  --xiketic: #111122;
+  --red-crayola: #e84855;
+}
+
+body  {
+  background-color: var(--astronaut);
+}
