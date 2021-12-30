@@ -8,6 +8,13 @@
   --red-crayola: #e84855;
 }
 
+@font-face {
+  font-family: OpenSans;
+  src: url("font/OpenSans/OpenSans-Medium.ttf") format('woff');
+}
+
 #body {
-  background-color: #1a;
+  background-color: #1a1a1a;
+  color: ivory;
+  font-family: OpenSans;
 }
