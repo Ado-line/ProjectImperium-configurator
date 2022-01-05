@@ -1,11 +1,12 @@
 :root {
-  --funky-blue: #212e5e;
+  --funky-blue: #000F44;
   --astronaut: #2b3d7b;
   --oxford-blue: #0E1428;
   --dim-gray:  #626267;
   --ivory: #FFFFEE;
   --xiketic: #111122;
   --red-crayola: #e84855;
+  --purple: #6824D3;
 }
 
 @font-face {
@@ -14,21 +15,65 @@
 }
 
 #body {
-  background-color: #1a1a1a;
+  background-color: #000F44;
   color: ivory;
   font-family: OpenSans;
 }
+
+#menu-nav {
+  height: 100%;
+  left: 0%;
+  position: fixed;
+  width: 6%;
+  background-image: linear-gradient(to right, #6824D3 0%, #000F44 60%);
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  /*Transition Timings*/
+  transition: width 0.5s, box-shadow 0.5s;
+  /*Old */
+  /*z-index: 100;*/
+}
+
+#menu-nav:hover {
+  width: 15%;
+  box-shadow: 10px 0px 10px rgba(0,0,0,0.5);
+  /*background-image: linear-gradient(to right, #6824D3 0%, #000F44 32%);*/
+}
+
+.button-nav {
+  display: inline-block;
+  list-style-type: none;
+  filter: drop-shadow(0px 0px 0px grey);
+  /*Transition Timings*/
+  transition: filter 0.05s;
+  max-height: 7%;
+}
+
+.button-nav:hover {
+  filter: drop-shadow(0px 0px 2px grey);
+}
+
+#menu-buttons {
+  top: 0%;
+  width: 100%;
+}
+
 
 /*controllerImage.js necessary CSS */
 
 .controllerImageWrapper {
   --scaleFactor: 0.5;
 
-  position: relative;
+  position: absolute;
+  width: 80%;
+  padding-top: 80%;
+  right: -10%;
+  top: -10%;
   transform: scale(var(--scaleFactor));
 }
 .controllerOverlayImage {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
