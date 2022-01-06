@@ -9,17 +9,16 @@
     <title>Project Imperium - Configurator</title>
   </head>
   <body id="body">
-    <div id="menu-nav" class="nav">
+    <div id="home-button" class="nav button-nav">
+        <div class="nav-button-img"><img src="img/ProjectImperiumLogo.svg" style="filter: invert(100%);"></div>
+        <div class="nav-button-text"><p style="margin: auto;">Imperium</p></div>
     </div>
+    </div>
+      <div id="menu-bar" class="nav">
+      </div>
     <div id="menu-buttons" class="nav">
-
-      <div id="home-button" class="nav button-nav">
-          <div class="nav-button-img"><img src="img/ProjectImperiumLogo.svg" style="filter: invert(100%);"></div>
-          <div class="nav-button-text"><p style="margin: auto;">Imperium</p></div>
-        </div>
     </div>
-
-
+<div id="main-content">
     <p>Controller Modules</p>
     <p>Try moving the mouse around and clicking or using the keyboard (left, right, tab, space, enter, etc.).</p>
  <!-- tabindex="1" is needed to receive onkey* events -->
@@ -31,5 +30,7 @@
      <img id="controllerImageDiv.img3" class="controllerOverlayImage" src="img/FB4.png">
  </div>
  <script src="js/controllerImage.js"></script>
+</div> <!-- End of main-content div-->
+<script src="js/menu-anim.js"></script>
   </body>
 </html>

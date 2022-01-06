@@ -20,7 +20,7 @@
   font-family: OpenSans;
 }
 
-#menu-nav {
+#menu-bar {
   height: 100%;
   left: 0%;
   position: fixed;
@@ -33,21 +33,39 @@
   /*z-index: 100;*/
 }
 
-#menu-nav:hover {
+/*
+#menu-bar:hover {
   width: 15%;
   box-shadow: 10px 0px 10px rgba(0,0,0,0.5);
-  /*background-image: linear-gradient(to right, #6824D3 0%, #000F44 32%);*/
 }
+*/
 
+#menu-bar:hover ~ .nav-button-text {
+  width: 100%;
+}
 
 .button-nav {
   filter: drop-shadow(0px 0px 0px grey);
   /*Transition Timings*/
   transition: filter 0.05s;
+  width: 15%;
+  background: rgba(0, 0, 0, 0);
+  position: fixed;
+  z-index: 100;
 }
 
 .button-nav:hover {
   filter: drop-shadow(0px 0px 2px grey);
+}
+
+.button-nav:hover ~ #menu-nav {
+  width: 15%;
+  box-shadow: 10px 0px 10px rgba(0,0,0,0.5);
+}
+
+.button-nav:hover ~ .nav-button-text {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+  opacity: 1.0;
 }
 
 .nav-button-img {
@@ -55,13 +73,30 @@
   display: inline-block;
 }
 
+.nav-button-img:hover ~ .nav-button-text {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+}
+
 .nav-button-text {
   display: inline-block;
   margin: auto;
+  font-size: 20pt;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
+  transition: clip-path 0.25s ease 0.05s;
+}
+
+.nav-button-text:hover {
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
 }
 
 #menu-buttons {
   width: 15vw;
+}
+
+#main-content {
+  padding-left: 6%;
 }
 
 /*controllerImage.js necessary CSS */
