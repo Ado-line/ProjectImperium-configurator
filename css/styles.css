@@ -77,7 +77,7 @@
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
 }
 
-.nav-button-text {
+#nav-button-text-home {
   display: inline-block;
   margin: auto;
   font-size: 20pt;
@@ -95,7 +95,7 @@
   width: 15vw;
 }
 
-#main-content {
+.main-content {
   padding-left: 6%;
 }
 
