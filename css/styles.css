@@ -39,24 +39,30 @@
   /*background-image: linear-gradient(to right, #6824D3 0%, #000F44 32%);*/
 }
 
+
 .button-nav {
-  display: inline-block;
-  list-style-type: none;
   filter: drop-shadow(0px 0px 0px grey);
   /*Transition Timings*/
   transition: filter 0.05s;
-  max-height: 7%;
 }
 
 .button-nav:hover {
   filter: drop-shadow(0px 0px 2px grey);
 }
 
-#menu-buttons {
-  top: 0%;
-  width: 100%;
+.nav-button-img {
+  width: 5rem;
+  display: inline-block;
 }
 
+.nav-button-text {
+  display: inline-block;
+  margin: auto;
+}
+
+#menu-buttons {
+  width: 15vw;
+}
 
 /*controllerImage.js necessary CSS */
 
