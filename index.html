@@ -6,9 +6,10 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Project Imperium - Configurator</title>
+    <title>Project Imperium</title>
+    <link rel="shortcut icon" href="img/ProjectImperiumLogo.svg" type="image/x-icon">
   </head>
-  <body id="body">
+  <body onwheel="ScrollCheck(event)">
 
       <div id="menu-bar" class="nav">
         <div id="menu-buttons" class="nav">
@@ -26,20 +27,27 @@
     <div id="controller-inside-img"><img src="img/ControllerInside.png"></div>
     <div id="controller-shell-img"><img src="img/ControllerShell_1.png"></div>
     <div id="controller-modules-img"><img src="img/ControllerModules.png"></div>
- <!-- tabindex="1" is needed to receive onkey* events -->
- <!--<div id="controllerImageDiv" class="controllerImageWrapper" tabindex="1">
-     <img id="controllerImageDiv.baseImg" class="controllerOverlayImage" src="img/ControllerBase.png">
-     <img id="controllerImageDiv.img0" class="controllerOverlayImage" src="img/JS1.png">
-     <img id="controllerImageDiv.img1" class="controllerOverlayImage" src="img/DP2.png">
-     <img id="controllerImageDiv.img2" class="controllerOverlayImage" src="img/JS3.png">
-     <img id="controllerImageDiv.img3" class="controllerOverlayImage" src="img/FB4.png">
- </div>
- <script src="js/controllerImage.js"></script>-->
-<!--<input type="button" value="Beeeeeeg" onclick="MouseCheckEnter();">
-<input type="button" value="Smoooool" onclick="MouseCheckLeave();">-->
-</div> <!-- End of main-content div-->
+</div> <!-- End of main-content-1 -->
 
-<script src="js/menu-anim.js"></script>
+<div id="main-content-2">
+  <h1>This Be A Test</h1>
+<!-- tabindex="1" is needed to receive onkey* events -->
+<div id="controllerImageDiv" class="controllerImageWrapper" tabindex="1">
+    <img id="controllerImageDiv.baseImg" class="controllerOverlayImage" src="img/ControllerBase.png">
+    <img id="controllerImageDiv.img0" class="controllerOverlayImage" src="img/JS1.png">
+    <img id="controllerImageDiv.img1" class="controllerOverlayImage" src="img/DP2.png">
+    <img id="controllerImageDiv.img2" class="controllerOverlayImage" src="img/JS3.png">
+    <img id="controllerImageDiv.img3" class="controllerOverlayImage" src="img/FB4.png">
+</div>
+<script src="js/controllerImage.js"></script>
+</div> <!-- End of main-content-2 -->
+
+<div id="main-content-3">
+  <h1>This Be Yet Another Test, slide 3</h1>
+  <h1>Do what you want because a pirate is free!</h1>
+</div> <!-- End of main-content-2 -->
+
+<script src="js/anim.js"></script>
 <script>initAttention()</script>
   </body>
 </html>

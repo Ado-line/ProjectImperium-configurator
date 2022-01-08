@@ -11,10 +11,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap');
 
-/*@font-face {
-  font-family: 'OpenSans';
-  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
-}*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+ display: none;
+}
 
 h1 {
   font-weight: 800;
@@ -25,11 +25,20 @@ h2 {
   font-size: 4vw;
 }
 
-#body {
+body {
   background-color: #000F44;
+  width: 100vw;
+/*  height: 100vh; */
+  overflow-y: hidden;
+  overflow-x: hidden;
   color: ivory;
   font-family: OpenSans, Arial;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
+
+/* Menu Related */
 
 #menu-bar {
   height: 100%;
@@ -38,6 +47,7 @@ h2 {
   width: 6%;
   background: #242424;
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  z-index: 1000;
   /*Transition Timings*/
   transition: width 0.5s, box-shadow 0.5s;
 }
@@ -50,15 +60,6 @@ h2 {
   background: rgba(0, 0, 0, 0);
   position: fixed;
   z-index: 100;
-}
-
-.button-nav:hover {
-  filter: drop-shadow(0px 0px 2px grey);
-}
-
-.button-nav:hover ~ .nav-button-text {
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-  opacity: 1.0;
 }
 
 #home-button {
@@ -81,19 +82,17 @@ h2 {
   transition-delay: 0.05s;
 }
 
-/*
-#menu-buttons {
-  width: 6vw;
-  transition: width 0.5s;
-}
-*/
+/* End Menu Related */
+
+/* MAIN CONTENT 1*/
 
 #main-content-1 {
+  position: fixed;
   width: 100vw;
   height: 100vh;
   padding-left: 7%;
-  transition: padding-left 0.5s;
-  overflow: hidden;
+  top: 0vh;
+  transition: padding-left 0.5s, top 0.5s;
 }
 
 #tag-line {
@@ -101,11 +100,9 @@ h2 {
   padding-left: 4%;
 }
 
-
-
 #controller-inside-img {
   width: 40vw;
-  position: fixed;
+  position: absolute;
   top: 50%;
   margin-left: 60%;
 }
@@ -116,7 +113,7 @@ h2 {
 
 #controller-shell-img  {
   width: 40vw;
-  position: fixed;
+  position: absolute;
   top: 37%;
   margin-left: 40%;
 }
@@ -127,7 +124,7 @@ h2 {
 
 #controller-modules-img {
   width: 40vw;
-  position: fixed;
+  position: absolute;
   top: 45%;
   margin-left: 27%;
 }
@@ -135,6 +132,34 @@ h2 {
 #controller-modules-img img {
   width: 100%;
 }
+
+/* END MAIN CONTENT 1 */
+
+/* MAIN CONTENT 2*/
+
+#main-content-2 {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 7%;
+  top: 100vh;
+  transition: padding-left 0.5s, top 0.5s;
+}
+
+/* END MAIN CONTENT 2 */
+
+/* MAIN CONTENT 3*/
+
+#main-content-3 {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 7%;
+  top: 100vh;
+  transition: padding-left 0.5s, top 0.5s;
+}
+
+/* END MAIN CONTENT 3 */
 
 /*controllerImage.js necessary CSS */
 
