@@ -9,12 +9,21 @@
   --purple: #6824D3;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap');
 
 /*@font-face {
   font-family: 'OpenSans';
   src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
 }*/
+
+h1 {
+  font-weight: 800;
+  font-size: 7vw;
+}
+
+h2 {
+  font-size: 4vw;
+}
 
 #body {
   background-color: #000F44;
@@ -79,9 +88,52 @@
 }
 */
 
-#main-content {
+#main-content-1 {
+  width: 100vw;
+  height: 100vh;
   padding-left: 7%;
   transition: padding-left 0.5s;
+  overflow: hidden;
+}
+
+#tag-line {
+  padding-top: 2.5%;
+  padding-left: 4%;
+}
+
+
+
+#controller-inside-img {
+  width: 40vw;
+  position: fixed;
+  top: 50%;
+  margin-left: 60%;
+}
+
+#controller-inside-img img {
+  width: 100%;
+}
+
+#controller-shell-img  {
+  width: 40vw;
+  position: fixed;
+  top: 37%;
+  margin-left: 40%;
+}
+
+#controller-shell-img  img {
+  width: 100%;
+}
+
+#controller-modules-img {
+  width: 40vw;
+  position: fixed;
+  top: 45%;
+  margin-left: 27%;
+}
+
+#controller-modules-img img {
+  width: 100%;
 }
 
 /*controllerImage.js necessary CSS */
