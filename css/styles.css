@@ -9,15 +9,17 @@
   --purple: #6824D3;
 }
 
-@font-face {
-  font-family: OpenSans;
-  src: url("font/OpenSans/OpenSans-Medium.ttf") format('woff');
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+/*@font-face {
+  font-family: 'OpenSans';
+  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+}*/
 
 #body {
   background-color: #000F44;
   color: ivory;
-  font-family: OpenSans;
+  font-family: OpenSans, Arial;
 }
 
 #menu-bar {
@@ -25,23 +27,10 @@
   left: 0%;
   position: fixed;
   width: 6%;
-  background-image: linear-gradient(to right, #6824D3 0%, #000F44 60%);
+  background: #242424;
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
   /*Transition Timings*/
   transition: width 0.5s, box-shadow 0.5s;
-  /*Old */
-  /*z-index: 100;*/
-}
-
-/*
-#menu-bar:hover {
-  width: 15%;
-  box-shadow: 10px 0px 10px rgba(0,0,0,0.5);
-}
-*/
-
-#menu-bar:hover ~ .nav-button-text {
-  width: 100%;
 }
 
 .button-nav {
@@ -58,45 +47,41 @@
   filter: drop-shadow(0px 0px 2px grey);
 }
 
-.button-nav:hover ~ #menu-nav {
-  width: 15%;
-  box-shadow: 10px 0px 10px rgba(0,0,0,0.5);
-}
-
 .button-nav:hover ~ .nav-button-text {
   clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
   opacity: 1.0;
 }
 
-.nav-button-img {
-  width: 5rem;
-  display: inline-block;
+#home-button {
+  width: 6vw;
 }
 
-.nav-button-img:hover ~ .nav-button-text {
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
+.nav-button-img {
+  width: 6vw;
+  display: inline-block;
 }
 
 #nav-button-text-home {
   display: inline-block;
   margin: auto;
-  font-size: 20pt;
+  font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
   clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
   transition: clip-path 0.25s ease 0.05s;
+  transition-delay: 0.05s;
 }
 
-.nav-button-text:hover {
-  clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
-}
-
+/*
 #menu-buttons {
-  width: 15vw;
+  width: 6vw;
+  transition: width 0.5s;
 }
+*/
 
-.main-content {
-  padding-left: 6%;
+#main-content {
+  padding-left: 7%;
+  transition: padding-left 0.5s;
 }
 
 /*controllerImage.js necessary CSS */
