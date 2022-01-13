@@ -84,6 +84,48 @@ body {
 
 /* End Menu Related */
 
+/* Nav Arrow Related */
+
+#nav-arrow-up {
+  position: fixed;
+  transform: rotate(90deg);
+  filter: invert(100%);
+  margin-top: 1.5vh;
+  margin-left: 50vw;
+  margin-right: 50vw;
+  width: 5vw;
+  height: 5vw;
+  z-index: 10000;
+  opacity: 0.0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+#nav-arrow-up img {
+  width: 100%;
+}
+
+#nav-arrow-down {
+  position: fixed;
+  transform: rotate(270deg);
+  filter: invert(100%);
+  margin-top: 89vh;
+  margin-left: 50vw;
+  margin-right: 50vw;
+  width: 5vw;
+  height: 5vw;
+  z-index: 10000;
+  opacity: 1.0;
+  transition: opacity 0.3s;
+  pointer-events: all;
+}
+
+#nav-arrow-down img {
+  width: 100%;
+}
+
+/* END Nav Arrow Related */
+
 /* MAIN CONTENT 1*/
 
 #main-content-1 {
@@ -135,7 +177,7 @@ body {
 
 /* END MAIN CONTENT 1 */
 
-/* MAIN CONTENT 2*/
+/* MAIN CONTENT 2 */
 
 #main-content-2 {
   position: fixed;
@@ -148,7 +190,7 @@ body {
 
 /* END MAIN CONTENT 2 */
 
-/* MAIN CONTENT 3*/
+/* MAIN CONTENT 3 */
 
 #main-content-3 {
   position: fixed;
@@ -161,6 +203,19 @@ body {
 
 /* END MAIN CONTENT 3 */
 
+/* MAIN CONTENT 4 */
+
+#main-content-4 {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding-left: 7%;
+  top: 100vh;
+  transition: padding-left 0.5s, top 0.5s;
+}
+
+/* END MAIN CONTENT 4 */
+
 /*controllerImage.js necessary CSS */
 
 .controllerImageWrapper {
@@ -169,7 +224,7 @@ body {
   position: absolute;
   width: 80%;
   padding-top: 80%;
-  right: -10%;
+  margin-left: 20%;
   top: -10%;
   transform: scale(var(--scaleFactor));
 }
