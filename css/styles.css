@@ -26,7 +26,8 @@ h2 {
 }
 
 body {
-  background-color: #000F44;
+  background: rgba(70,1,105,1);
+    background-image: linear-gradient(62deg, #460169 0%, #000652 89%);
   width: 100vw;
 /*  height: 100vh; */
   overflow-y: hidden;
@@ -41,46 +42,193 @@ body {
 /* Menu Related */
 
 #menu-bar {
-  height: 100%;
+  height: 5vh;
   left: 0%;
   position: fixed;
-  width: 6%;
+  width: 100vw;
   background: #242424;
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
   z-index: 1000;
   /*Transition Timings*/
-  transition: width 0.5s, box-shadow 0.5s;
+  transition: height 0.5s, box-shadow 0.5s;
 }
 
-.button-nav {
-  filter: drop-shadow(0px 0px 0px grey);
-  /*Transition Timings*/
-  transition: filter 0.05s;
-  width: 15%;
-  background: rgba(0, 0, 0, 0);
-  position: fixed;
-  z-index: 100;
-}
+/* HOME BUTTON */
 
 #home-button {
-  width: 6vw;
+  display: inline-block;
+  position: absolute;
+  top: -10vh;
+  left: 0vw;
+  height: 10vh;
+  width: 15vw;
+  /* Transition Timings */
+  transition: top 0.25s ease;
+  transition-delay: 0.05s;
 }
 
-.nav-button-img {
-  width: 6vw;
-  display: inline-block;
+#nav-button-img-home {
+  height: 100%;
+  position: absolute;
+  /* Transition Timings */
+  transition: height 0.6s;
+}
+
+#nav-button-img-home img  {
+  height: 100%;
 }
 
 #nav-button-text-home {
   display: inline-block;
-  margin: auto;
+  position: absolute;
+  margin-left: 5vw;
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
-  clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%);
-  transition: clip-path 0.25s ease 0.05s;
-  transition-delay: 0.05s;
+  top: 2vh;
 }
+
+/* HOME BUTTON END*/
+
+/* DESIGN BUTTON */
+
+#design-button {
+  display: inline-block;
+  position: absolute;
+  top: -10vh;
+  left: 15vw;
+  height: 10vh;
+  width: 13vw;
+  /* Transition Timings */
+  transition: top 0.25s ease;
+  transition-delay: 0.07s;
+}
+
+#nav-button-img-design {
+  position: absolute;
+  height: 100%;
+}
+
+#nav-button-img-design img  {
+  height: 100%;
+}
+
+#nav-button-text-design {
+  display: inline-block;
+  position: absolute;
+  margin-left: 5.5vw;
+  font-size: 2vw;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 2vh;
+}
+
+/* DESIGN BUTTON END*/
+
+/* PROTOTYPE BUTTON */
+
+#prototype-button {
+  display: inline-block;
+  position: absolute;
+  top: -10vh;
+  left: 28vw;
+  height: 10vh;
+  width: 15vw;
+  /* Transition Timings */
+  transition: top 0.25s ease;
+  transition-delay: 0.09s;
+}
+
+#nav-button-img-prototype {
+  height: 100%;
+  position: relative;
+}
+
+#nav-button-img-prototype img  {
+  height: 100%;
+}
+
+#nav-button-text-prototype {
+  display: inline-block;
+  position: absolute;
+  margin-left: 5vw;
+  font-size: 2vw;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 2vh;
+}
+
+/* PROTOTYPE BUTTON END*/
+
+/* CONTACT BUTTON */
+
+#contact-button {
+  display: inline-block;
+  position: absolute;
+  top: -10vh;
+  left: 43vw;
+  height: 10vh;
+  width: 15vw;
+  /* Transition Timings */
+  transition: top 0.25s ease;
+  transition-delay: 0.11s;
+}
+
+#nav-button-img-contact {
+  height: 100%;
+  position: relative;
+}
+
+#nav-button-img-contact img  {
+  height: 100%;
+}
+
+#nav-button-text-contact {
+  display: inline-block;
+  position: absolute;
+  margin-left: 5vw;
+  font-size: 2vw;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 2vh;
+}
+
+/* CONTACT BUTTON END*/
+
+/* CREDITS BUTTON */
+
+#credits-button {
+  display: inline-block;
+  position: absolute;
+  top: -10vh;
+  right: 1vw;
+  height: 10vh;
+  width: 11vw;
+  /* Transition Timings */
+  transition: top 0.25s ease;
+  transition-delay: 0.13s;
+}
+
+#nav-button-img-credits {
+  height: 100%;
+  position: relative;
+}
+
+#nav-button-img-credits img  {
+  height: 100%;
+}
+
+#nav-button-text-credits {
+  display: inline-block;
+  position: absolute;
+  margin-left: 5vw;
+  font-size: 2vw;
+  overflow: hidden;
+  white-space: nowrap;
+  top: 2vh;
+}
+
+/* CREDITS BUTTON END*/
 
 /* End Menu Related */
 
@@ -90,11 +238,10 @@ body {
   position: fixed;
   transform: rotate(90deg);
   filter: invert(100%);
-  margin-top: 1.5vh;
-  margin-left: 50vw;
-  margin-right: 50vw;
-  width: 5vw;
-  height: 5vw;
+  margin-top: 12vh;
+  margin-left: 1vw;
+  width: 3.5vw;
+  height: 3.5vw;
   z-index: 10000;
   opacity: 0.0;
   transition: opacity 0.3s;
@@ -110,10 +257,9 @@ body {
   transform: rotate(270deg);
   filter: invert(100%);
   margin-top: 89vh;
-  margin-left: 50vw;
-  margin-right: 50vw;
-  width: 5vw;
-  height: 5vw;
+  margin-left: 1vw;
+  width: 3.5vw;
+  height: 3.5vw;
   z-index: 10000;
   opacity: 1.0;
   transition: opacity 0.3s;
@@ -132,47 +278,67 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  padding-left: 7%;
+  margin-top: 8vh;
   top: 0vh;
-  transition: padding-left 0.5s, top 0.5s;
+  transition: margin-top 0.5s, top 0.5s;
+}
+
+#main-content-1-dividerBG {
+  position: absolute;
+  width: 100vw;
+  height: 51vh;
+  background: #a84a73;
+  background-image: linear-gradient(45deg, #0d0887, #41049d, #6a00a8, #8f0da4, #b12a90, #cb4679, #e16462, #f1834c, #fca636, #fcce25, #fcce25);
+  overflow: hidden;
 }
 
 #tag-line {
-  padding-top: 2.5%;
-  padding-left: 4%;
+  position: absolute;
+  padding-left: 30%;
 }
 
 #controller-inside-img {
   width: 40vw;
   position: absolute;
-  top: 50%;
-  margin-left: 60%;
+  top: 25%;
+  margin-left: -7%;
 }
 
 #controller-inside-img img {
   width: 100%;
+  transform: scaleX(-1);
 }
 
 #controller-shell-img  {
   width: 40vw;
   position: absolute;
-  top: 37%;
-  margin-left: 40%;
+  top: 18%;
+  margin-left: 3%;
 }
 
 #controller-shell-img  img {
   width: 100%;
+  transform: scaleX(-1);
 }
 
 #controller-modules-img {
   width: 40vw;
   position: absolute;
-  top: 45%;
-  margin-left: 27%;
+  top: 35%;
+  margin-left: 13%;
 }
 
 #controller-modules-img img {
   width: 100%;
+  transform: scaleX(-1);
+}
+
+#main-content-1-divider {
+  position: absolute;
+  background-color: black;
+  top: 50vh;
+  width: 100vw;
+  height: 3vh;
 }
 
 /* END MAIN CONTENT 1 */
@@ -183,9 +349,29 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  padding-left: 7%;
+  margin-top: 8vh;
   top: 100vh;
-  transition: padding-left 0.5s, top 0.5s;
+  transition: margin-top 0.5s, top 0.5s;
+}
+
+/*controllerImage.js necessary CSS */
+
+.controllerImageWrapper {
+  --scaleFactor: 1.0;
+
+  position: absolute;
+  width: 40vw;
+  padding-top: 40vw;
+  margin-left: 50vw;
+  top: 20vh;
+  transform: scale(var(--scaleFactor));
+}
+.controllerOverlayImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* END MAIN CONTENT 2 */
@@ -196,9 +382,9 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  padding-left: 7%;
+  margin-top: 8vh;
   top: 100vh;
-  transition: padding-left 0.5s, top 0.5s;
+  transition: margin-top 0.5s, top 0.5s;
 }
 
 /* END MAIN CONTENT 3 */
@@ -209,29 +395,9 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  padding-left: 7%;
+  margin-top: 8vh;
   top: 100vh;
-  transition: padding-left 0.5s, top 0.5s;
+  transition: margin-top 0.5s, top 0.5s;
 }
 
 /* END MAIN CONTENT 4 */
-
-/*controllerImage.js necessary CSS */
-
-.controllerImageWrapper {
-  --scaleFactor: 0.5;
-
-  position: absolute;
-  width: 80%;
-  padding-top: 80%;
-  margin-left: 20%;
-  top: -10%;
-  transform: scale(var(--scaleFactor));
-}
-.controllerOverlayImage {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}

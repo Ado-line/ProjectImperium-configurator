@@ -1,6 +1,9 @@
-
 var menuBar = document.getElementById('menu-bar');
-var navButtonTextHome = document.getElementById('nav-button-text-home');
+var homeButton = document.getElementById('home-button');
+var designButton = document.getElementById('design-button');
+var prototypeButton = document.getElementById('prototype-button');
+var contactButton = document.getElementById('contact-button');
+var creditsButton = document.getElementById('credits-button');
 var navArrowUp = document.getElementById('nav-arrow-up');
 var navArrowDown = document.getElementById('nav-arrow-down');
 var mainContent1 = document.getElementById('main-content-1');
@@ -19,29 +22,38 @@ function DoNothing() {
 }
 
 function MouseCheckEnter() {
-  // console.log("Beeeeeg");
-  homeButton.style.width = '15vw';
-  menuBar.style.width = '15%';
-  menuBar.style['box-shadow'] = '10px 0px 10px rgba(0,0,0,0.5)';
-  mainContent1.style['padding-left'] = '16%';
-  mainContent2.style['padding-left'] = '16%';
-  mainContent3.style['padding-left'] = '16%';
-  mainContent4.style['padding-left'] = '16%';
-  navButtonTextHome.style['clip-path'] = 'polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%)';
-  setTimeout(function(){homeButton.style.width = '15vw';}, 500);
+  menuBar.style.height = '10vh';
+  menuBar.style['box-shadow'] = '0px 10px 5px rgba(0,0,0,0.33)';
+  //
+  homeButton.style.top = "0vh";
+  designButton.style.top = "0vh";
+  prototypeButton.style.top = "0vh";
+  contactButton.style.top = "0vh";
+  creditsButton.style.top = "0vh";
+  //
+  mainContent1.style['margin-top'] = '9vh';
+  mainContent2.style['margin-top'] = '9vh';
+  mainContent3.style['margin-top'] = '9vh';
+  mainContent4.style['margin-top'] = '9vh';
 }
 
 function MouseCheckLeave() {
-  // console.log("Smoooool");
-  setTimeout(function(){homeButton.style.width = '6vw';}, 500);
-  menuBar.style.width = '6%';
-  menuBar.style['box-shadow'] = '0px 0px 0px rgba(0,0,0,0)';
-  mainContent1.style['padding-left'] = '7%';
-  mainContent2.style['padding-left'] = '7%';
-  mainContent3.style['padding-left'] = '7%';
-  mainContent4.style['padding-left'] = '7%';
-  navButtonTextHome.style['clip-path'] = 'polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%)';
+  setTimeout(function() {menuBar.style.height = '5vh';}, 100)
+  setTimeout(function() {menuBar.style['box-shadow'] = '0px 0px 0px rgba(0,0,0,0)';}, 100)
+  //
+  homeButton.style.top = "-10vh";
+  designButton.style.top = "-10vh";
+  prototypeButton.style.top = "-10vh";
+  contactButton.style.top = "-10vh";
+  creditsButton.style.top = "-10vh";
+  //
+  setTimeout( function() {
+  mainContent1.style['margin-top'] = '4vh';
+  mainContent2.style['margin-top'] = '4vh';
+  mainContent3.style['margin-top'] = '4vh';
+  mainContent4.style['margin-top'] = '4vh';}, 100)
 }
+
 
 function initAttention() {
   MouseCheckEnter();
@@ -102,7 +114,7 @@ function SlideMove(scrollDi)  {
             mainContent3.style.top = 200 + slideInit + "vh";
             mainContent4.style.top = 300 + slideInit + "vh";
             delayTimer = epochTimer();
-            console.log(slideInit + " <---- New Offset Value")
+            //console.log(slideInit + " <---- New Offset Value")
           }
         } else if (scrollDi < 0) {
             slideInit = slideInit - slideOffSet;
@@ -116,10 +128,10 @@ function SlideMove(scrollDi)  {
               mainContent3.style.top = 200 + slideInit + "vh";
               mainContent4.style.top = 300 + slideInit + "vh";
               delayTimer = epochTimer();
-              console.log(slideInit + " <---- New Offset Value")
+              //console.log(slideInit + " <---- New Offset Value")
             }
           } else {
-        console.log("Function 'SlideMove' has bad trigger!");
+        console.log("Function 'SlideMove' has bad parameter!");
         }
       NavArrowAnim(slideInit);
 } else {
@@ -145,6 +157,6 @@ document.onkeydown = function(event) {
 function ScrollCheck(event) {
   //console.log(slideOffSet + " <---- Slide Amount");
   scrollDi = event.deltaY;
-  console.log("Function 'ScrollCheck' ran, Var 'scrollDi' = " + scrollDi);
+  //console.log("Function 'ScrollCheck' ran, Var 'scrollDi' = " + scrollDi);
   SlideMove(scrollDi)
 }
