@@ -9,11 +9,11 @@
     <title>Project Imperium</title>
     <link rel="shortcut icon" href="img/ProjectImperiumLogo.svg" type="image/x-icon">
   </head>
-  <body onwheel="ScrollCheck(event)">
+  <body onwheel="ScrollCheck(event)" onload="initAttention()">
 
       <div id="menu-bar">
           <div id="home-button">
-            <div id="nav-button-img-home"><img src="img/ProjectImperiumLogo.svg" style="filter: invert(100%);"></div>
+            <div id="nav-button-img-home"><img src="img/ProjectImperiumLogo.svg"></div>
             <div id="nav-button-text-home"><p>Imperium</p></div>
           </div>
           <div id="design-button">
@@ -34,6 +34,8 @@
           </div>
       </div>
 
+      <img id="nav-indicator" src="img/ProjectImperiumLogo.svg">
+      <!--<div id="nav-indicator"><img id="nav-indicator" src="img/ProjectImperiumLogo.svg"></div>-->
       <div id="nav-arrow-up"><img onclick="SlideMove(-1)" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_71411.png&f=1&nofb=1"></div>
       <div id="nav-arrow-down"><img onclick="SlideMove(1)" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_71411.png&f=1&nofb=1"></div>
 
@@ -74,6 +76,5 @@
 </div> <!-- End of main-content-4 -->
 
 <script src="js/anim.js"></script>
-<script>initAttention()</script>
   </body>
 </html>

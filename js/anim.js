@@ -4,6 +4,7 @@ var designButton = document.getElementById('design-button');
 var prototypeButton = document.getElementById('prototype-button');
 var contactButton = document.getElementById('contact-button');
 var creditsButton = document.getElementById('credits-button');
+var navIndicator = document.getElementById('nav-indicator');
 var navArrowUp = document.getElementById('nav-arrow-up');
 var navArrowDown = document.getElementById('nav-arrow-down');
 var mainContent1 = document.getElementById('main-content-1');
@@ -22,7 +23,8 @@ function DoNothing() {
 }
 
 function MouseCheckEnter() {
-  menuBar.style.height = '10vh';
+  navIndicator.style.opacity = "0.0";
+  menuBar.style.height = '7vh';
   menuBar.style['box-shadow'] = '0px 10px 5px rgba(0,0,0,0.33)';
   //
   homeButton.style.top = "0vh";
@@ -31,14 +33,15 @@ function MouseCheckEnter() {
   contactButton.style.top = "0vh";
   creditsButton.style.top = "0vh";
   //
-  mainContent1.style['margin-top'] = '9vh';
-  mainContent2.style['margin-top'] = '9vh';
-  mainContent3.style['margin-top'] = '9vh';
-  mainContent4.style['margin-top'] = '9vh';
+  mainContent1.style['margin-top'] = '6vh';
+  mainContent2.style['margin-top'] = '6vh';
+  mainContent3.style['margin-top'] = '6vh';
+  mainContent4.style['margin-top'] = '6vh';
 }
 
 function MouseCheckLeave() {
-  setTimeout(function() {menuBar.style.height = '5vh';}, 100)
+  setTimeout(function() {navIndicator.style.opacity = "1.0";}, 150)
+  setTimeout(function() {menuBar.style.height = '3vh';}, 100)
   setTimeout(function() {menuBar.style['box-shadow'] = '0px 0px 0px rgba(0,0,0,0)';}, 100)
   //
   homeButton.style.top = "-10vh";
@@ -48,10 +51,10 @@ function MouseCheckLeave() {
   creditsButton.style.top = "-10vh";
   //
   setTimeout( function() {
-  mainContent1.style['margin-top'] = '4vh';
-  mainContent2.style['margin-top'] = '4vh';
-  mainContent3.style['margin-top'] = '4vh';
-  mainContent4.style['margin-top'] = '4vh';}, 100)
+  mainContent1.style['margin-top'] = '2vh';
+  mainContent2.style['margin-top'] = '2vh';
+  mainContent3.style['margin-top'] = '2vh';
+  mainContent4.style['margin-top'] = '2vh';}, 100)
 }
 
 
@@ -76,25 +79,41 @@ let slideInit = parseInt(0);
 var slideOffSet = parseInt(-100);
 var slideAmount = 4; // How many slides are there?
 let scrollDi = 0;
+let currentImage = "img/" + "ProjectImperiumLogo.svg";
 
 // Event Listeners for Slide Show Animation
 // "onwheel" Located in HTML on the "<body>" tag itself, doesn't work with an event Listener for some reason.
 // Okay, so creating artificial events in Javascript is incredibly strange, just gonna do the hackey method, it will save a lot of time.
 // The Arrow Navigation Buttons at the top and buttom of the page have "onclick="SlideMove()"" attached to them.
 
+function NavIndicatorAnim(imageName) { //Must Include File extension for imageName
+  if ("img/" + imageName == currentImage){
+    DoNothing();
+  } else {
+  navIndicator.style.opacity = "0.0";
+  setTimeout(function() {navIndicator.src = "./img/" + imageName;}, 50);
+  setTimeout(function () {navIndicator.style.opacity = "1.0";}, 100);
+  currentImage = "img/" + imageName;
+}
+}
+
 function NavArrowAnim(slideInit) {
   if (slideInit === 0) {
     navArrowUp.style["pointer-events"] = "none";
     navArrowUp.style.opacity = "0.0";
+    NavIndicatorAnim("ProjectImperiumLogo.svg");
   } else if (slideInit === -100) {
     navArrowUp.style["pointer-events"] = "all";
     navArrowUp.style.opacity = "1.0";
+    NavIndicatorAnim("DesignLogo.svg");
   } else if (slideInit === -200) {
     navArrowDown.style["pointer-events"] = "all";
     navArrowDown.style.opacity = "1.0";
+    NavIndicatorAnim("PrototypeLogo.svg");
   } else if (slideInit === -300) {
     navArrowDown.style["pointer-events"] = "none";
     navArrowDown.style.opacity = "0.0";
+    NavIndicatorAnim("ContactLogo.svg");
   } else {
     console.log("Function 'NavArrowAnim' recieved bad parameter!");
   }

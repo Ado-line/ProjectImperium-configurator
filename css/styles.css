@@ -42,7 +42,7 @@ body {
 /* Menu Related */
 
 #menu-bar {
-  height: 5vh;
+  height: 3vh;
   left: 0%;
   position: fixed;
   width: 100vw;
@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: -10vh;
   left: 0vw;
-  height: 10vh;
+  height: 6.5vh;
   width: 15vw;
   /* Transition Timings */
   transition: top 0.25s ease;
@@ -85,7 +85,7 @@ body {
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
-  top: 2vh;
+  top: 0.5vh;
 }
 
 /* HOME BUTTON END*/
@@ -97,7 +97,7 @@ body {
   position: absolute;
   top: -10vh;
   left: 15vw;
-  height: 10vh;
+  height: 6.5vh;
   width: 13vw;
   /* Transition Timings */
   transition: top 0.25s ease;
@@ -120,7 +120,7 @@ body {
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
-  top: 2vh;
+  top: 0.5vh;
 }
 
 /* DESIGN BUTTON END*/
@@ -132,7 +132,7 @@ body {
   position: absolute;
   top: -10vh;
   left: 28vw;
-  height: 10vh;
+  height: 6.5vh;
   width: 15vw;
   /* Transition Timings */
   transition: top 0.25s ease;
@@ -155,7 +155,7 @@ body {
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
-  top: 2vh;
+  top: 0.5vh;
 }
 
 /* PROTOTYPE BUTTON END*/
@@ -167,7 +167,7 @@ body {
   position: absolute;
   top: -10vh;
   left: 43vw;
-  height: 10vh;
+  height: 6.5vh;
   width: 15vw;
   /* Transition Timings */
   transition: top 0.25s ease;
@@ -190,7 +190,7 @@ body {
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
-  top: 2vh;
+  top: 0.5vh;
 }
 
 /* CONTACT BUTTON END*/
@@ -202,7 +202,7 @@ body {
   position: absolute;
   top: -10vh;
   right: 1vw;
-  height: 10vh;
+  height: 6.5vh;
   width: 11vw;
   /* Transition Timings */
   transition: top 0.25s ease;
@@ -225,12 +225,28 @@ body {
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
-  top: 2vh;
+  top: 0.5vh;
 }
 
 /* CREDITS BUTTON END*/
 
 /* End Menu Related */
+
+/* Nav Indicator */
+
+#nav-indicator {
+  pointer-events: none;
+  position: fixed;
+  opacity: 1.0;
+  height: 3vh;
+  width: 3vh;
+  left: 0.2vh;
+  z-index: 1000;
+  /* Transition Timings */
+  transition: opacity 0.05s;
+}
+
+/* End Nav Indicator */
 
 /* Nav Arrow Related */
 
@@ -238,7 +254,7 @@ body {
   position: fixed;
   transform: rotate(90deg);
   filter: invert(100%);
-  margin-top: 12vh;
+  margin-top: 9vh;
   margin-left: 1vw;
   width: 3.5vw;
   height: 3.5vw;
@@ -278,7 +294,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  margin-top: 8vh;
+  margin-top: 2vh;
   top: 0vh;
   transition: margin-top 0.5s, top 0.5s;
 }
@@ -349,7 +365,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  margin-top: 8vh;
+  margin-top: 2vh;
   top: 100vh;
   transition: margin-top 0.5s, top 0.5s;
 }
@@ -382,7 +398,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  margin-top: 8vh;
+  margin-top: 2vh;
   top: 100vh;
   transition: margin-top 0.5s, top 0.5s;
 }
@@ -395,7 +411,7 @@ body {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  margin-top: 8vh;
+  margin-top: 2vh;
   top: 100vh;
   transition: margin-top 0.5s, top 0.5s;
 }
