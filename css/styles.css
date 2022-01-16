@@ -72,8 +72,8 @@ body {
   position: absolute;
   top: -10vh;
   left: 0vw;
-  height: 6.5vh;
-  width: 15vw;
+  height: 7vh;
+  width: 13vw;
   /* Transition Timings */
   transition: top 0.25s ease;
   transition-delay: 0.05s;
@@ -93,7 +93,7 @@ body {
 #nav-button-text-home {
   display: inline-block;
   position: absolute;
-  margin-left: 5vw;
+  margin-left: 4vw;
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
@@ -108,9 +108,9 @@ body {
   display: inline-block;
   position: absolute;
   top: -10vh;
-  left: 15vw;
-  height: 6.5vh;
-  width: 13vw;
+  left: 13.5vw;
+  height: 7vh;
+  width: 10.8vw;
   /* Transition Timings */
   transition: top 0.25s ease;
   transition-delay: 0.07s;
@@ -128,7 +128,7 @@ body {
 #nav-button-text-design {
   display: inline-block;
   position: absolute;
-  margin-left: 5.5vw;
+  margin-left: 4vw;
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
@@ -143,9 +143,9 @@ body {
   display: inline-block;
   position: absolute;
   top: -10vh;
-  left: 28vw;
-  height: 6.5vh;
-  width: 15vw;
+  left: 24.8vw;
+  height: 7vh;
+  width: 13vw;
   /* Transition Timings */
   transition: top 0.25s ease;
   transition-delay: 0.09s;
@@ -163,7 +163,7 @@ body {
 #nav-button-text-prototype {
   display: inline-block;
   position: absolute;
-  margin-left: 5vw;
+  margin-left: 3.8vw;
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
@@ -178,9 +178,9 @@ body {
   display: inline-block;
   position: absolute;
   top: -10vh;
-  left: 43vw;
-  height: 6.5vh;
-  width: 15vw;
+  left: 38.3vw;
+  height: 7vh;
+  width: 11.8vw;
   /* Transition Timings */
   transition: top 0.25s ease;
   transition-delay: 0.11s;
@@ -198,7 +198,7 @@ body {
 #nav-button-text-contact {
   display: inline-block;
   position: absolute;
-  margin-left: 5vw;
+  margin-left: 4vw;
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
@@ -213,9 +213,9 @@ body {
   display: inline-block;
   position: absolute;
   top: -10vh;
-  right: 1vw;
-  height: 6.5vh;
-  width: 11vw;
+  right: 0vw;
+  height: 7vh;
+  width: 10.5vw;
   /* Transition Timings */
   transition: top 0.25s ease;
   transition-delay: 0.13s;
@@ -233,7 +233,7 @@ body {
 #nav-button-text-credits {
   display: inline-block;
   position: absolute;
-  margin-left: 5vw;
+  margin-left: 3.8vw;
   font-size: 2vw;
   overflow: hidden;
   white-space: nowrap;
@@ -347,7 +347,7 @@ body {
   right: 1vw;
   width: 3.5vw;
   height: 3.5vw;
-  z-index: 10000;
+  z-index: 1000;
   opacity: 0.0;
   transition: opacity 0.3s;
   pointer-events: none;
@@ -369,7 +369,7 @@ body {
   right: 1vw;
   width: 3.5vw;
   height: 3.5vw;
-  z-index: 10000;
+  z-index: 1000;
   opacity: 1.0;
   transition: opacity 0.3s;
   pointer-events: all;
