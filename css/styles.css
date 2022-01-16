@@ -53,6 +53,18 @@ body {
   transition: height 0.5s, box-shadow 0.5s;
 }
 
+.menu-button {
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  background-color: #404040;
+}
+
+.menu-button:active {
+  background-color: #666666;
+}
+
 /* HOME BUTTON */
 
 #home-button {
@@ -232,6 +244,83 @@ body {
 
 /* End Menu Related */
 
+/* Credits Related */
+
+#credits-container {
+  padding-top: 10vh;
+  position: fixed;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 1100;
+  /* Transition Timings */
+  transition: opacity 0.2s;
+}
+
+#dismiss-credits {
+  background-image: url("../img/LabelX.svg");
+  position: absolute;
+  width: 3.5vw;
+  height: 3.5vw;
+  right: 29vw;
+  top: 8vh;
+  cursor: pointer;
+}
+
+#dismiss-credits:hover {
+  background-image: url("../img/LabelX-Hover.svg");
+}
+
+#credits-content {
+  padding: 1%;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 1%;
+  grid-auto-rows: 24.4%;
+  width: 40vw;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  top: 10vh;
+  background-color: #4d001f;
+  border-radius: 5%;
+}
+
+.grid-item {
+  background-color: #660029;
+  text-align: center;
+}
+
+.grid-item img {
+  height: 100%;
+  padding: 3%;
+}
+
+.grid-item h3 {
+  font-size: 2vw;
+  padding-top: 7%;
+  font-weight: 800;
+}
+
+.grid-item p {
+  font-size: 1.3vw;
+  padding-top: 1%;
+}
+
+.cg-l {
+  border-radius: 10% 0% 0% 10%;
+}
+
+.cg-r {
+  border-radius: 0% 10% 10% 0%;
+}
+
+/* END Credits Related */
+
 /* Nav Indicator */
 
 #nav-indicator {
@@ -251,11 +340,11 @@ body {
 /* Nav Arrow Related */
 
 #nav-arrow-up {
+  background-image: url("../img/NavArrowUp.svg");
+  cursor: pointer;
   position: fixed;
-  transform: rotate(90deg);
-  filter: invert(100%);
   margin-top: 9vh;
-  margin-left: 1vw;
+  right: 1vw;
   width: 3.5vw;
   height: 3.5vw;
   z-index: 10000;
@@ -264,16 +353,20 @@ body {
   pointer-events: none;
 }
 
-#nav-arrow-up img {
-  width: 100%;
+#nav-arrow-up:hover {
+  background-image: url("../img/NavArrowUp-Hover.svg");
+}
+
+#nav-arrow-up:active {
+  background-image: url("../img/NavArrowUp.svg");
 }
 
 #nav-arrow-down {
+  background-image: url("../img/NavArrowDown.svg");
+  cursor: pointer;
   position: fixed;
-  transform: rotate(270deg);
-  filter: invert(100%);
   margin-top: 89vh;
-  margin-left: 1vw;
+  right: 1vw;
   width: 3.5vw;
   height: 3.5vw;
   z-index: 10000;
@@ -282,8 +375,12 @@ body {
   pointer-events: all;
 }
 
-#nav-arrow-down img {
-  width: 100%;
+#nav-arrow-down:hover {
+  background-image: url("../img/NavArrowDown-Hover.svg");
+}
+
+#nav-arrow-down:active {
+  background-image: url("../img/NavArrowDown.svg");
 }
 
 /* END Nav Arrow Related */

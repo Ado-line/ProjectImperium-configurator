@@ -12,32 +12,46 @@
   <body onwheel="ScrollCheck(event)" onload="initAttention()">
 
       <div id="menu-bar">
-          <div id="home-button">
+          <div id="home-button" class="menu-button" onclick="MenuBarButtonNav(0)">
             <div id="nav-button-img-home"><img src="img/ProjectImperiumLogo.svg"></div>
             <div id="nav-button-text-home"><p>Imperium</p></div>
           </div>
-          <div id="design-button">
+          <div id="design-button" class="menu-button" onclick="MenuBarButtonNav(-100)">
             <div id="nav-button-img-design"><img src="img/DesignLogo.svg"></div>
             <div id="nav-button-text-design"><p>Design</p></div>
           </div>
-          <div id="prototype-button">
+          <div id="prototype-button" class="menu-button" onclick="MenuBarButtonNav(-200)">
             <div id="nav-button-img-prototype"><img src="img/PrototypeLogo.svg"></div>
             <div id="nav-button-text-prototype"><p>Prototype</p></div>
           </div>
-          <div id="contact-button">
+          <div id="contact-button" class="menu-button" onclick="MenuBarButtonNav(-300)">
             <div id="nav-button-img-contact"><img src="img/ContactLogo.svg"></div>
             <div id="nav-button-text-contact"><p>Contact</p></div>
           </div>
-          <div id="credits-button">
+          <div id="credits-button" class="menu-button" onclick="CreditsToggle('open')">
             <div id="nav-button-img-credits"><img src="img/CreditsLogo.svg"></div>
             <div id="nav-button-text-credits"><p>Credits</p></div>
           </div>
       </div>
 
+      <div id="credits-container">
+        <div id="dismiss-credits"></div>
+        <div id="credits-content">
+            <div class="grid-item cg-l"><img src="img/Ado-Pic.png"></div>
+            <div class="grid-item cg-r"><h3>Adoline</h3><p>Site Designer / Graphics Artist</p></div>
+            <div class="grid-item cg-l"><h3>Δelta</h3><p>Prototype Engineer</p></div>
+            <div class="grid-item cg-r"><img src="img/Delta-Pic.png" style="transform: scaleX(-1);"></div>
+            <div class="grid-item cg-l"><img src="img/Mikel-Pic.png"></div>
+            <div class="grid-item cg-r"><h3>Mikel</h3><p>Javascript Engineer</p></div>
+            <div class="grid-item cg-l"><h3>Qanazoga</h3><p>Consultant</p></div>
+            <div class="grid-item cg-r"><img src="img/Qanazoga-Pic.png" style="transform: scaleX(-1);"></div>
+        </div>
+      </div>
+
       <img id="nav-indicator" src="img/ProjectImperiumLogo.svg">
       <!--<div id="nav-indicator"><img id="nav-indicator" src="img/ProjectImperiumLogo.svg"></div>-->
-      <div id="nav-arrow-up"><img onclick="SlideMove(-1)" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_71411.png&f=1&nofb=1"></div>
-      <div id="nav-arrow-down"><img onclick="SlideMove(1)" src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_71411.png&f=1&nofb=1"></div>
+      <div id="nav-arrow-up" onclick="SlideMove(-1)"></div>
+      <div id="nav-arrow-down" onclick="SlideMove(1)"></div>
 
 <div id="main-content-1">
   <div id="main-content-1-dividerBG">

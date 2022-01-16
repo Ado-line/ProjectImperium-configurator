@@ -4,6 +4,9 @@ var designButton = document.getElementById('design-button');
 var prototypeButton = document.getElementById('prototype-button');
 var contactButton = document.getElementById('contact-button');
 var creditsButton = document.getElementById('credits-button');
+var creditsContainer = document.getElementById('credits-container');
+var dismissCreditsButton = document.getElementById('dismiss-credits');
+var creditsContent = document.getElementById('credits-content');
 var navIndicator = document.getElementById('nav-indicator');
 var navArrowUp = document.getElementById('nav-arrow-up');
 var navArrowDown = document.getElementById('nav-arrow-down');
@@ -86,34 +89,140 @@ let currentImage = "img/" + "ProjectImperiumLogo.svg";
 // Okay, so creating artificial events in Javascript is incredibly strange, just gonna do the hackey method, it will save a lot of time.
 // The Arrow Navigation Buttons at the top and buttom of the page have "onclick="SlideMove()"" attached to them.
 
-function NavIndicatorAnim(imageName) { //Must Include File extension for imageName
+creditsContainer.addEventListener("click", function(evt) {
+    targetEl = evt.target; // clicked element
+  do {
+    if(targetEl == creditsContent) {
+      // This is a click inside, does nothing, just return.
+      DoNothing();
+      return;
+    }
+    // Go up the DOM
+    targetEl = targetEl.parentNode;
+  } while (targetEl);
+  // This is a click outside.
+  CreditsToggle("close");
+});
+
+dismissCreditsButton.addEventListener("click", function() {CreditsToggle("close")});
+
+function CreditsToggle(whichAnim) { // Options: open, close
+  if (whichAnim == "open") {
+    creditsContainer.style.left = "0vw";
+    creditsContainer.style['pointer-events'] = "all";
+    creditsContainer.style.opacity = "1.0";
+  } else if (whichAnim == "close") {
+    creditsContainer.style.opacity = "0.0";
+    creditsContainer.style['pointer-events'] = "none";
+    setTimeout(function() {creditsContainer.style.left = "100vw";}, 200);
+  } else {
+    console.log("Function CreditsToggle() has bad parameter!");
+  }
+}
+
+function MenuBarButtonNav(desiredSlide) {
+    if (desiredSlide == 0) {
+      mainContent1.style.top = 0 + "vh";
+      mainContent2.style.top = 100 + 0 + "vh";
+      mainContent3.style.top = 200 + 0 + "vh";
+      mainContent4.style.top = 300 + 0 + "vh";
+      slideInit = 0
+      NavArrowAnim(slideInit, false)
+    } else if (desiredSlide == -100) {
+      mainContent1.style.top = -100 + "vh";
+      mainContent2.style.top = 100 + -100 + "vh";
+      mainContent3.style.top = 200 + -100 + "vh";
+      mainContent4.style.top = 300 + -100 + "vh";
+      slideInit = -100
+      NavArrowAnim(slideInit, false)
+    } else if (desiredSlide == -200) {
+      mainContent1.style.top = -200 + "vh";
+      mainContent2.style.top = 100 + -200 + "vh";
+      mainContent3.style.top = 200 + -200 + "vh";
+      mainContent4.style.top = 300 + -200 + "vh";
+      slideInit = -200
+      NavArrowAnim(slideInit, false)
+    } else if (desiredSlide == -300) {
+      mainContent1.style.top = -300 + "vh";
+      mainContent2.style.top = 100 + -300 + "vh";
+      mainContent3.style.top = 200 + -300 + "vh";
+      mainContent4.style.top = 300 + -300 + "vh";
+      slideInit = -300
+      NavArrowAnim(slideInit, false)
+    } else {
+      console.log("Function MenuBarButtonNav() has bad parameter!")
+    }
+}
+
+function NavIndicatorAnim(imageName, animStatus) { //Must Include File extension for imageName, // anim status can either be true or false
   if ("img/" + imageName == currentImage){
     DoNothing();
-  } else {
+  } else if (animStatus == true) {
   navIndicator.style.opacity = "0.0";
   setTimeout(function() {navIndicator.src = "./img/" + imageName;}, 50);
   setTimeout(function () {navIndicator.style.opacity = "1.0";}, 100);
   currentImage = "img/" + imageName;
+} else if (animStatus == false) {
+  navIndicator.src = "./img/" + imageName;
+  currentImage = "img/" + imageName;
+} else {
+  console.log("Function NavIndicatorAnim() has bad parameter!")
 }
 }
 
-function NavArrowAnim(slideInit) {
+function NavArrowAnim(slideInit, indicatorAnimStatus) {
   if (slideInit === 0) {
     navArrowUp.style["pointer-events"] = "none";
     navArrowUp.style.opacity = "0.0";
-    NavIndicatorAnim("ProjectImperiumLogo.svg");
+    navArrowDown.style["pointer-events"] = "all";
+    navArrowDown.style.opacity = "1.0";
+      switch (indicatorAnimStatus) {
+      case true:
+        NavIndicatorAnim("ProjectImperiumLogo.svg", true);
+        break;
+      case false:
+        NavIndicatorAnim("ProjectImperiumLogo.svg", false);
+        break;
+      }
   } else if (slideInit === -100) {
     navArrowUp.style["pointer-events"] = "all";
     navArrowUp.style.opacity = "1.0";
-    NavIndicatorAnim("DesignLogo.svg");
-  } else if (slideInit === -200) {
     navArrowDown.style["pointer-events"] = "all";
     navArrowDown.style.opacity = "1.0";
-    NavIndicatorAnim("PrototypeLogo.svg");
+      switch (indicatorAnimStatus) {
+        case true:
+          NavIndicatorAnim("DesignLogo.svg", true);
+          break;
+        case false:
+          NavIndicatorAnim("DesignLogo.svg", false);
+          break;
+      }
+  } else if (slideInit === -200) {
+    navArrowUp.style["pointer-events"] = "all";
+    navArrowUp.style.opacity = "1.0";
+    navArrowDown.style["pointer-events"] = "all";
+    navArrowDown.style.opacity = "1.0";
+      switch (indicatorAnimStatus) {
+        case true:
+          NavIndicatorAnim("PrototypeLogo.svg", true);
+          break;
+        case false:
+          NavIndicatorAnim("PrototypeLogo.svg", false);
+          break;
+    }
   } else if (slideInit === -300) {
+    navArrowUp.style["pointer-events"] = "all";
+    navArrowUp.style.opacity = "1.0";
     navArrowDown.style["pointer-events"] = "none";
     navArrowDown.style.opacity = "0.0";
-    NavIndicatorAnim("ContactLogo.svg");
+      switch (indicatorAnimStatus) {
+        case true:
+          NavIndicatorAnim("ContactLogo.svg", true);
+          break;
+        case false:
+          NavIndicatorAnim("ContactLogo.svg", false);
+          break;
+  }
   } else {
     console.log("Function 'NavArrowAnim' recieved bad parameter!");
   }
@@ -152,7 +261,7 @@ function SlideMove(scrollDi)  {
           } else {
         console.log("Function 'SlideMove' has bad parameter!");
         }
-      NavArrowAnim(slideInit);
+      NavArrowAnim(slideInit, true);
 } else {
   DoNothing();
 }
