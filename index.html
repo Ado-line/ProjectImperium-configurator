@@ -39,10 +39,10 @@
         <div id="credits-content">
             <div class="grid-item cg-l"><img src="img/Ado-Pic.png"></div>
             <div class="grid-item cg-r"><h3>Adoline</h3><p>Site Designer / Graphics Artist</p></div>
-            <div class="grid-item cg-l"><h3>Δelta</h3><p>Prototype Engineer</p></div>
+            <div class="grid-item cg-l"><h3>Δelta</h3><p>Hardware Engineer</p></div>
             <div class="grid-item cg-r"><img src="img/Delta-Pic.png" style="transform: scaleX(-1);"></div>
             <div class="grid-item cg-l"><img src="img/Mikel-Pic.png"></div>
-            <div class="grid-item cg-r"><h3>Mikel</h3><p>Javascript Engineer</p></div>
+            <div class="grid-item cg-r"><h3>Mikel</h3><p>Software Engineer</p></div>
             <div class="grid-item cg-l"><h3>Qanazoga</h3><p>Consultant</p></div>
             <div class="grid-item cg-r"><img src="img/Qanazoga-Pic.png" style="transform: scaleX(-1);"></div>
         </div>
@@ -87,8 +87,12 @@
 <div id="main-content-4">
   <h1>Contact</h1>
   <h2>We Promise we don't bite</h2>
+  <button id="email-test-button" onclick="SendTestEmail()"></button>
+  <button id="insecure-email-test-button" onclick="SendInsecureTestEmail()"></button>
 </div> <!-- End of main-content-4 -->
 
+<script src="js/email.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script> <!-- Used for Emailing -->
 <script src="js/anim.js"></script>
   </body>
 </html>

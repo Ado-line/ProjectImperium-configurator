@@ -29,7 +29,7 @@ body {
   background: rgba(70,1,105,1);
     background-image: linear-gradient(62deg, #460169 0%, #000652 89%);
   width: 100vw;
-/*  height: 100vh; */
+  height: 100vh;
   overflow-y: hidden;
   overflow-x: hidden;
   color: ivory;
@@ -38,6 +38,18 @@ body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+#email-test-button {
+  width: 10%;
+  height: 10%;
+}
+
+#insecure-email-test-button {
+  background-color: red;
+  width: 10%;
+  height: 10%;
+}
+
 
 /* Menu Related */
 
