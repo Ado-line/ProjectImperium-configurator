@@ -88,17 +88,18 @@
   <h2>Wanna get in touch?</h2>
   <p>Send us a message below and we'll get back to you soon!</p>
 
-  <form name="message-form" id="contact-form" action="[WRITE FUNCTION]">
+  <form name="message-form" id="contact-form" action="javascript:void(0);" onsubmit="SendMessage();">
     <label id="email-label" for="email-input">Email Address:</label>
-    <input form="contact-form" required type="email" id="email-input" placeholder="you@example.com" value="">
+    <input form="contact-form" name="email-input" required type="email" id="email-input" placeholder="you@example.com" value="">
     <label id="name-label" for="name-input">Name:</label>
-    <input form="contact-form" required type="text" id="name-input" placeholder="Your Name" value="">
+    <input form="contact-form" name="name-input" required type="text" id="name-input" placeholder="Your Name" value="">
     <label id="message-label" for="message-input">Message:</label>
-    <textarea form="contact-form" required id="message-input" placeholder="Message" value=""></textarea>
+    <textarea form="contact-form" name="message-input" required id="message-input" placeholder="Message" value=""></textarea>
     <input type="submit" id="send-email" value="Send Message">
   </form>
 </div> <!-- End of main-content-4 -->
 
+<script src=js/contact.js></script>
 <script src="js/anim.js"></script>
   </body>
 </html>
