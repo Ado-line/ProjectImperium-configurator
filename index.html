@@ -85,10 +85,18 @@
 </div> <!-- End of main-content-3 -->
 
 <div id="main-content-4">
-  <h1>Contact</h1>
-  <h2>We Promise we don't bite</h2>
-  <button id="email-test-button" onclick="SendTestEmail()"></button>
-  <button id="insecure-email-test-button" onclick="SendInsecureTestEmail()"></button>
+  <h2>Wanna get in touch?</h2>
+  <p>Send us a message below and we'll get back to you soon!</p>
+
+  <form name="message-form" id="contact-form" action="[WRITE FUNCTION]">
+    <label id="email-label" for="email-input">Email Address:</label>
+    <input form="contact-form" required type="email" id="email-input" placeholder="you@example.com" value="">
+    <label id="name-label" for="name-input">Name:</label>
+    <input form="contact-form" required type="text" id="name-input" placeholder="Your Name" value="">
+    <label id="message-label" for="message-input">Message:</label>
+    <textarea form="contact-form" required id="message-input" placeholder="Message" value=""></textarea>
+    <input type="submit" id="send-email" value="Send Message">
+  </form>
 </div> <!-- End of main-content-4 -->
 
 <script src="js/anim.js"></script>

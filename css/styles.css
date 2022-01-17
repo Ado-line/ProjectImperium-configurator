@@ -25,6 +25,7 @@ h2 {
   font-size: 4vw;
 }
 
+
 body {
   background: rgba(70,1,105,1);
     background-image: linear-gradient(62deg, #460169 0%, #000652 89%);
@@ -37,17 +38,6 @@ body {
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-}
-
-#email-test-button {
-  width: 10%;
-  height: 10%;
-}
-
-#insecure-email-test-button {
-  background-color: red;
-  width: 10%;
-  height: 10%;
 }
 
 
@@ -521,8 +511,79 @@ body {
   width: 100vw;
   height: 100vh;
   margin-top: 2vh;
+  padding-top: 2vh;
   top: 100vh;
   transition: margin-top 0.5s, top 0.5s;
+  text-align: center;
 }
+
+#main-content-4 p {
+  font-size: 2vw;
+}
+
+#contact-form {
+  display: grid;
+  grid-template-areas:
+  'emaillabel emaillabel namelabel namelabel'
+  'emailinput emailinput nameinput nameinput'
+  'messagelabel messagelabel messagelabel messagelabel'
+  'messageinput messageinput messageinput messageinput'
+  'messageinput messageinput messageinput messageinput'
+  'sendemail sendemail sendemail sendemail';
+  grid-gap: 3%;
+  padding: 5%;
+
+}
+
+input {
+  border-radius: 1vw;
+  padding: 1vw;
+  font-size: 1.5vw;
+}
+
+label {
+  font-size: 1.5vw;
+  color: rgba(255,255,255,0.6);
+}
+
+textarea {
+  border-radius: 1vw;
+  padding: 1vw;
+  font-size: 1.5vw;
+}
+
+#email-label {
+  grid-area: emaillabel;
+}
+
+#email-input {
+  grid-area: emailinput;
+}
+
+#name-label {
+  grid-area: namelabel;
+}
+
+#name-input {
+  grid-area: nameinput;
+}
+
+#message-label {
+  grid-area: messagelabel;
+}
+
+#message-input {
+  grid-area: messageinput;
+  height: 20vh;
+  resize: none;
+}
+
+#send-email {
+  grid-area: sendemail;
+  margin-left: 24vw;
+  margin-right: 24vw;
+  margin-top: 3vh;
+}
+
 
 /* END MAIN CONTENT 4 */
