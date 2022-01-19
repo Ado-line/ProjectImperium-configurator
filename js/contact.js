@@ -3,4 +3,7 @@ function SendMessage() {
   let name = document.forms["message-form"]["name-input"].value;
   let message = document.forms["message-form"]["message-input"].value;
   console.log(email + name + message);
+  document.forms["message-form"]["email-input"].value = "";
+  document.forms["message-form"]["name-input"].value = "";
+  document.forms["message-form"]["message-input"].value = "";
 };

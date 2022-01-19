@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <title>Project Imperium</title>
     <link rel="shortcut icon" href="img/ProjectImperiumLogo.svg" type="image/x-icon">
   </head>
-  <body onwheel="ScrollCheck(event)" onload="initAttention()">
+  <body onload="initAttention()">
 
       <div id="menu-bar">
           <div id="home-button" class="menu-button" onclick="MenuBarButtonNav(0)">
@@ -37,14 +37,59 @@
       <div id="credits-container">
         <div id="dismiss-credits"></div>
         <div id="credits-content">
-            <div class="grid-item cg-l"><img src="img/Ado-Pic.png"></div>
-            <div class="grid-item cg-r"><h3>Adoline</h3><p>Site Designer / Graphics Artist</p></div>
-            <div class="grid-item cg-l"><h3>Δelta</h3><p>Hardware Engineer</p></div>
-            <div class="grid-item cg-r"><img src="img/Delta-Pic.png" style="transform: scaleX(-1);"></div>
-            <div class="grid-item cg-l"><img src="img/Mikel-Pic.png"></div>
-            <div class="grid-item cg-r"><h3>Mikel</h3><p>Software Engineer</p></div>
-            <div class="grid-item cg-l"><h3>Qanazoga</h3><p>Consultant</p></div>
-            <div class="grid-item cg-r"><img src="img/Qanazoga-Pic.png" style="transform: scaleX(-1);"></div>
+          <div id="credits-scroll-mask">
+            <div class="grid-item-cm cg-l"><img src="img/Ado-Pic.png"></div>
+            <div class="grid-item-cm cg-r">
+              <h3>Adoline</h3>
+              <p>Site Designer / Graphics Artist</p>
+              <div class="grid-credits-links">
+                <a target="_blank" title="Portfolio" href="https://adoline.me/portfolio/"><div class="grid-credits-links-item"><img src="img/Generic/Ado-Mark.svg"></div></a>
+                <a target="_blank" title="Github" href="https://github.com/Ado-line"><div class="grid-credits-links-item"><img src="img/Generic/GitHub-Mark.svg"></div></a>
+                <a target="_blank" title="Email" href="mailto:adoline.mccammon@gmail.com"><div class="grid-credits-links-item"><img src="img/Generic/Email-Mark.svg"></div></a>
+                <a target="_blank" title="Telegram" href="http://t.me/Adoline"><div class="grid-credits-links-item"><img src="img/Generic/Telegram-Mark.svg"></div></a>
+              </div>
+            </div>
+            <div class="grid-item-cm cg-l">
+              <h3>Δelta</h3>
+              <p>Hardware / Software Engineer</p>
+              <div class="grid-credits-links">
+                <a target="_blank" title="Twitter" href="https://twitter.com/nalisarc"><div class="grid-credits-links-item"><img src="img/Generic/Twitter-Mark.svg"></div></a>
+                <a target="_blank" title="Github" href="https://github.com/nalisarc"><div class="grid-credits-links-item"><img src="img/Generic/GitHub-Mark.svg"></div></a>
+                <a target="_blank" title="Email" href="mailto:nalisarc@gmail.com"><div class="grid-credits-links-item"><img src="img/Generic/Email-Mark.svg"></div></a>
+              </div>
+            </div>
+            <div class="grid-item-cm cg-r"><img src="img/Delta-Pic.png" style="transform: scaleX(-1);"></div>
+            <div class="grid-item-cm cg-l"><img src="img/Mikel-Pic.png"></div>
+            <div class="grid-item-cm cg-r">
+              <h3>Mikel</h3>
+              <p>Software Engineer</p>
+              <div class="grid-credits-links">
+                <a target="_blank" title="Website" href="https://mikelmcdaniel.github.io/"><div class="grid-credits-links-item"><img src="img/Generic/GenericLink-Mark.svg"></div></a>
+                <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/mikel-mcdaniel-14ba74164/"><div class="grid-credits-links-item"><img src="img/Generic/LinkedIn-Mark.svg"></div></a>
+              </div>
+            </div>
+            <div class="grid-item-cm cg-l">
+              <h3>Qanazoga</h3>
+              <p>Software Engineer</p>
+              <div class="grid-credits-links">
+                <a target="_blank" title="Website" href="https://qanazoga.com/"><div class="grid-credits-links-item"><img src="img/Generic/SeaFoam-Mark.svg"></div></a>
+                <a target="_blank" title="Github" href="https://github.com/qanazoga"><div class="grid-credits-links-item"><img src="img/Generic/GitHub-Mark.svg"></div></a>
+                <a target="_blank" title="Email" href="mailto:qanazoga@gmail.com"><div class="grid-credits-links-item"><img src="img/Generic/Email-Mark.svg"></div></a>
+                <a target="_blank" title="Twitter" href="https://twitter.com/qanazoga"><div class="grid-credits-links-item"><img src="img/Generic/Twitter-Mark.svg"></div></a>
+              </div>
+            </div>
+            <div class="grid-item-cm cg-r"><img src="img/Qanazoga-Pic.png" style="transform: scaleX(-1);"></div>
+            <div class="grid-item-cm cg-l"><img src="img/Rax-ProfilePic.png"></div>
+            <div class="grid-item-cm cg-r">
+              <h3>Rax</h3>
+              <p>Networking Engineer</p>
+              <div class="grid-credits-links">
+                <a target="_blank" title="Telegram" href="https://t.me/raxventus"><div class="grid-credits-links-item"><img src="img/Generic/Telegram-Mark.svg"></div></a>
+                <a target="_blank" title="GitTea" href="https://git.astragroup.info/Rax"><div class="grid-credits-links-item"><img src="img/Generic/AstraGroup-Mark.svg"></div></a>
+                <a target="_blank" title="Github" href="https://github.com/nate2014jatc"><div class="grid-credits-links-item"><img src="img/Generic/GitHub-Mark.svg"></div></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -53,7 +98,7 @@
       <div id="nav-arrow-up" onclick="SlideMove(-1)"></div>
       <div id="nav-arrow-down" onclick="SlideMove(1)"></div>
 
-<div id="main-content-1">
+<div onwheel="ScrollCheck(event)" id="main-content-1">
   <div id="main-content-1-dividerBG">
     <div id='tag-line'>
       <h1>Project Imperium</h1>
@@ -66,7 +111,7 @@
     <div id="main-content-1-divider"></div>
 </div> <!-- End of main-content-1 -->
 
-<div id="main-content-2">
+<div onwheel="ScrollCheck(event)" id="main-content-2">
   <h1>This Be A Test</h1>
 <!-- tabindex="1" is needed to receive onkey* events -->
 <div id="controllerImageDiv" class="controllerImageWrapper" tabindex="1">
@@ -79,12 +124,12 @@
 <script src="js/controllerImage.js"></script>
 </div> <!-- End of main-content-2 -->
 
-<div id="main-content-3">
+<div onwheel="ScrollCheck(event)" id="main-content-3">
   <h1>This Be Yet Another Test, slide 3</h1>
   <h1>Do what you want because a pirate is free!</h1>
 </div> <!-- End of main-content-3 -->
 
-<div id="main-content-4">
+<div onwheel="ScrollCheck(event)" id="main-content-4">
   <h2>Wanna get in touch?</h2>
   <p>Send us a message below and we'll get back to you soon!</p>
 
