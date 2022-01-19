@@ -107,21 +107,98 @@
     <div id="controller-inside-img"><img src="img/ControllerInside.png"></div>
     <div id="controller-shell-img"><img src="img/ControllerShell_1.png"></div>
     <div id="controller-modules-img"><img src="img/ControllerModules.png"></div>
+    <img id="modular-tagline-line" src="img/MainContent1/ModularTagline-Line.svg">
+    <img id="durable-tagline-line" src="img/MainContent1/DurableTagline-Line.svg">
+    <img id="precise-tagline-line" src="img/MainContent1/PreciseTagline-Line.svg">
+    <div id="extra-taglines-container">
+      <div id="modular-tagline-content">
+        <h3>Modular.</h3>
+        <h4 id="modular-tagline-text">• Hot Swappable<br>• Fully Customizable<br>• User Programmable<br></h4>
+      </div>
+      <div id="durable-tagline-content">
+        <h3>Durable.</h3>
+        <h4 id="durable-tagline-text">• Easy to Repair<br>• Open Source<br>• Replaceable Parts<br></h4>
+      </div>
+      <div id="precise-tagline-content">
+        <h3>Precise.</h3>
+        <h4 id="precise-tagline-text">• Minimal Delay<br>• USB-C Connector<br>• Did we mentions it's Open Source?<br></h4>
+      </div>
     </div>
+    <h4 id="call-to-action">Scroll For More</h4>
+  </div>
     <div id="main-content-1-divider"></div>
 </div> <!-- End of main-content-1 -->
 
 <div onwheel="ScrollCheck(event)" id="main-content-2">
-  <h1>This Be A Test</h1>
+  <h1 id="tagline-maincontent2">Go Ahead</h1>
+  <div id="controller-buttons-container">
+  <div id="body-color-buttons">
+    <div class="color-button c1" onclick="CBanim(1)"></div>
+    <div class="color-button c2" onclick="CBanim(2)"></div>
+    <div class="color-button c3" onclick="CBanim(3)"></div>
+    <div class="color-button c4" onclick="CBanim(4)"></div>
+    <div class="color-button c5" onclick="CBanim(5)"></div>
+    <div class="color-button c6" onclick="CBanim(6)"></div>
+    <div class="color-button c7" onclick="CBanim(7)"></div>
+    <div class="color-button c8" onclick="CBanim(8)"></div>
+    <div class="color-button c9" onclick="CBanim(9)"></div>
+  </div>
+  <div id="faceplate-color-buttons">
+    <div class="color-button c1" onclick="PCanim(1)"></div>
+    <div class="color-button c2" onclick="PCanim(2)"></div>
+    <div class="color-button c3" onclick="PCanim(3)"></div>
+    <div class="color-button c4" onclick="PCanim(4)"></div>
+    <div class="color-button c5" onclick="PCanim(5)"></div>
+    <div class="color-button c6" onclick="PCanim(6)"></div>
+    <div class="color-button c7" onclick="PCanim(7)"></div>
+    <div class="color-button c8" onclick="PCanim(8)"></div>
+    <div class="color-button c9" onclick="PCanim(9)"></div>
+    <div class="color-button s1" onclick="PCanim(10)"></div>
+    <div class="color-button s2" onclick="PCanim(11)"></div>
+    <div class="color-button s3" onclick="PCanim(12)"></div>
+  </div>
+  <div id="module-color-buttons">
+    <div class="color-button c1" onclick="MCanim(1)"></div>
+    <div class="color-button c2" onclick="MCanim(2)"></div>
+    <div class="color-button c3" onclick="MCanim(3)"></div>
+    <div class="color-button c4" onclick="MCanim(4)"></div>
+    <div class="color-button c5" onclick="MCanim(5)"></div>
+    <div class="color-button c6" onclick="MCanim(6)"></div>
+    <div class="color-button c7" onclick="MCanim(7)"></div>
+    <div class="color-button c8" onclick="MCanim(8)"></div>
+    <div class="color-button c9" onclick="MCanim(9)"></div>
+  </div>
+</div>
+  <div id="controller-designer-container" class="designer unselectable">
+    <img id="triggers" class="no-touchy" src="img/script/Triggers.png">
+    <div id="controller-body" class="dynamic-controller-part no-touchy"><img src="img/Script/CB1.png"></div>
+    <div id="controller-faceplate" class="dynamic-controller-part no-touchy"><img src="img/Script/PC1.png"></div>
+    <img id="controller-navbuttons" class="no-touchy" src="img/script/NavButtons.png">
+    <div id="controller-modules" class="dynamic-controller-part no-touchy"><img src="img/Script/MC1.png"></div>
+    <img id="jsbevel-slot-1" class="jsbevel no-touchy" src="img/script/JSB1.png">
+    <img id="jsbevel-slot-2" class="jsbevel no-touchy" src="img/script/JSB2.png">
+    <img id="jsbevel-slot-3" class="jsbevel no-touchy" src="img/script/JSB3.png">
+    <img id="jsbevel-slot-4" class="jsbevel no-touchy" src="img/script/JSB4.png">
+    <img id="object-lines" class="no-touchy" src="img/script/ObjectLines.png">
+    <div id="controller-slot-1" class="dynamic-controller-part no-touchy"><img src="img/Script/JS1.png"></div>
+    <div id="controller-slot-2" class="dynamic-controller-part no-touchy"><img src="img/Script/DP2.png"></div>
+    <div id="controller-slot-3" class="dynamic-controller-part no-touchy"><img src="img/Script/JS3.png"></div>
+    <div id="controller-slot-4" class="dynamic-controller-part no-touchy"><img src="img/Script/FB4.png"></div>
+    <div id="slot-1-click" class="designer slot unselectable"></div>
+    <div id="slot-2-click" class="designer slot unselectable"></div>
+    <div id="slot-3-click" class="designer slot unselectable"></div>
+    <div id="slot-4-click" class="designer slot unselectable"></div>
+  </div>
+  <script src="js/alternate-controller.js"></script>
 <!-- tabindex="1" is needed to receive onkey* events -->
-<div id="controllerImageDiv" class="controllerImageWrapper" tabindex="1">
+<!--- <div id="controllerImageDiv" class="controllerImageWrapper" tabindex="1">
     <img id="controllerImageDiv.baseImg" class="controllerOverlayImage" src="img/ControllerBase.png">
     <img id="controllerImageDiv.img0" class="controllerOverlayImage" src="img/JS1.png">
     <img id="controllerImageDiv.img1" class="controllerOverlayImage" src="img/DP2.png">
     <img id="controllerImageDiv.img2" class="controllerOverlayImage" src="img/JS3.png">
     <img id="controllerImageDiv.img3" class="controllerOverlayImage" src="img/FB4.png">
-</div>
-<script src="js/controllerImage.js"></script>
+</div> --->
+<!--<script src="js/controllerImage.js"></script>--->
 </div> <!-- End of main-content-2 -->
 
 <div onwheel="ScrollCheck(event)" id="main-content-3">

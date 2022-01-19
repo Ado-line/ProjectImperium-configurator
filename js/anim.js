@@ -11,6 +11,12 @@ var navIndicator = document.getElementById('nav-indicator');
 var navArrowUp = document.getElementById('nav-arrow-up');
 var navArrowDown = document.getElementById('nav-arrow-down');
 var mainContent1 = document.getElementById('main-content-1');
+var modularTaglineLine = document.getElementById('modular-tagline-line');
+var durableTaglineLine = document.getElementById('durable-tagline-line');
+var preciseTaglineLine = document.getElementById('precise-tagline-line');
+var modularTagline = document.getElementById('modular-tagline-content');
+var durableTagline = document.getElementById('durable-tagline-content');
+var preciseTagline = document.getElementById('precise-tagline-content');
 var mainContent2 = document.getElementById('main-content-2');
 var mainContent3 = document.getElementById('main-content-3');
 var mainContent4 = document.getElementById('main-content-4');
@@ -30,11 +36,13 @@ function MouseCheckEnter() {
   menuBar.style.height = '7vh';
   menuBar.style['box-shadow'] = '0px 10px 5px rgba(0,0,0,0.33)';
   //
-  homeButton.style.top = "0vh";
-  designButton.style.top = "0vh";
-  prototypeButton.style.top = "0vh";
-  contactButton.style.top = "0vh";
-  creditsButton.style.top = "0vh";
+  homeButton.style['pointer-events'] = "all";
+  designButton.style['pointer-events'] = "all";
+  prototypeButton.style['pointer-events'] = "all";
+  contactButton.style['pointer-events'] = "all";
+  creditsButton.style['pointer-events'] = "all";
+  //
+  setTimeout(MenuButtonAnim("visible"), 100)
   //
   mainContent1.style['margin-top'] = '6vh';
   mainContent2.style['margin-top'] = '6vh';
@@ -47,11 +55,13 @@ function MouseCheckLeave() {
   setTimeout(function() {menuBar.style.height = '3vh';}, 100)
   setTimeout(function() {menuBar.style['box-shadow'] = '0px 0px 0px rgba(0,0,0,0)';}, 100)
   //
-  homeButton.style.top = "-10vh";
-  designButton.style.top = "-10vh";
-  prototypeButton.style.top = "-10vh";
-  contactButton.style.top = "-10vh";
-  creditsButton.style.top = "-10vh";
+  homeButton.style['pointer-events'] = "none";
+  designButton.style['pointer-events'] = "none";
+  prototypeButton.style['pointer-events'] = "none";
+  contactButton.style['pointer-events'] = "none";
+  creditsButton.style['pointer-events'] = "none";
+  //
+  setTimeout(MenuButtonAnim("invisible"), 100)
   //
   setTimeout( function() {
   mainContent1.style['margin-top'] = '2vh';
@@ -60,6 +70,25 @@ function MouseCheckLeave() {
   mainContent4.style['margin-top'] = '2vh';}, 100)
 }
 
+function MenuButtonAnim(whatAnim) {
+  if (whatAnim == "visible") {
+
+    homeButton.style.opacity = "1.0";
+    designButton.style.opacity = "1.0";
+    prototypeButton.style.opacity = "1.0";
+    contactButton.style.opacity = "1.0";
+    creditsButton.style.opacity = "1.0";
+  } else if (whatAnim == "invisible") {
+
+    homeButton.style.opacity = "0.0";
+    designButton.style.opacity = "0.0";
+    prototypeButton.style.opacity = "0.0";
+    contactButton.style.opacity = "0.0";
+    creditsButton.style.opacity = "0.0";
+  } else {
+    console.log("Function MenuButtonAnim() has bad parameter!");
+  }
+}
 
 function initAttention() {
   MouseCheckEnter();
@@ -72,6 +101,12 @@ function epochTimer() {
   return new Date().getTime();
 }
 
+modularTagline.addEventListener("mouseenter", function () {modularTagline.style.height = "66%"; durableTagline.style.top = "66%"; modularTaglineLine.style.opacity = "0.5";});
+modularTagline.addEventListener("mouseleave", function () {modularTagline.style.height = "17%"; durableTagline.style.top = "37%"; modularTaglineLine.style.opacity = "0.2";});
+durableTagline.addEventListener("mouseenter", function () {durableTagline.style.height = "66%"; durableTagline.style.top = "17%"; durableTaglineLine.style.opacity = "0.5";});
+durableTagline.addEventListener("mouseleave", function () {durableTagline.style.height = "17%"; durableTagline.style.top = "37%"; durableTaglineLine.style.opacity = "0.2";});
+preciseTagline.addEventListener("mouseenter", function () {preciseTagline.style.height = "66%"; preciseTagline.style.top = "34%"; durableTagline.style.top = "17%"; preciseTaglineLine.style.opacity = "0.5";});
+preciseTagline.addEventListener("mouseleave", function () {preciseTagline.style.height = "17%"; preciseTagline.style.top = "83%"; durableTagline.style.top = "37%"; preciseTaglineLine.style.opacity = "0.2";});
 
 
 // Necessary Variables for functions below

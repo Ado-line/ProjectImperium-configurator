@@ -25,6 +25,10 @@ h2 {
   font-size: 4vw;
 }
 
+h3 {
+  font-size: 3vw;
+}
+
 
 body {
   background: rgba(70,1,105,1);
@@ -49,6 +53,7 @@ body {
   position: fixed;
   width: 100vw;
   background: #242424;
+  overflow: hidden;
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
   z-index: 1000;
   /*Transition Timings*/
@@ -72,13 +77,14 @@ body {
 #home-button {
   display: inline-block;
   position: absolute;
-  top: -10vh;
+  opacity: 0.0;
+  pointer-events: none;
   left: 0vw;
   height: 7vh;
   width: 13vw;
   /* Transition Timings */
-  transition: top 0.25s ease;
-  transition-delay: 0.05s;
+  transition: opacity 0.25s ease;
+  /*transition-delay: 0.05s;*/
 }
 
 #nav-button-img-home {
@@ -109,13 +115,14 @@ body {
 #design-button {
   display: inline-block;
   position: absolute;
-  top: -10vh;
+  opacity: 0.0;
+  pointer-events: none;
   left: 13.5vw;
   height: 7vh;
   width: 10.8vw;
   /* Transition Timings */
-  transition: top 0.25s ease;
-  transition-delay: 0.07s;
+  transition: opacity 0.25s ease;
+  /*transition-delay: 0.07s;*/
 }
 
 #nav-button-img-design {
@@ -144,13 +151,14 @@ body {
 #prototype-button {
   display: inline-block;
   position: absolute;
-  top: -10vh;
+  opacity: 0.0;
+  pointer-events: none;
   left: 24.8vw;
   height: 7vh;
   width: 13vw;
   /* Transition Timings */
-  transition: top 0.25s ease;
-  transition-delay: 0.09s;
+  transition: opacity 0.25s ease;
+  /*transition-delay: 0.09s;*/
 }
 
 #nav-button-img-prototype {
@@ -179,13 +187,14 @@ body {
 #contact-button {
   display: inline-block;
   position: absolute;
-  top: -10vh;
+  opacity: 0.0;
+  pointer-events: none;
   left: 38.3vw;
   height: 7vh;
   width: 11.8vw;
   /* Transition Timings */
-  transition: top 0.25s ease;
-  transition-delay: 0.11s;
+  transition: opacity 0.25s ease;
+  /*transition-delay: 0.11s;*/
 }
 
 #nav-button-img-contact {
@@ -214,13 +223,14 @@ body {
 #credits-button {
   display: inline-block;
   position: absolute;
-  top: -10vh;
+  opacity: 0.0;
+  pointer-events: none;
   right: 0vw;
   height: 7vh;
   width: 10.5vw;
   /* Transition Timings */
-  transition: top 0.25s ease;
-  transition-delay: 0.13s;
+  transition: opacity 0.25s ease;
+  /*transition-delay: 0.13s;*/
 }
 
 #nav-button-img-credits {
@@ -456,7 +466,7 @@ body {
 #main-content-1-dividerBG {
   position: absolute;
   width: 100vw;
-  height: 51vh;
+  height: 95vh;
   background: #a84a73;
   background-image: linear-gradient(45deg, #0d0887, #41049d, #6a00a8, #8f0da4, #b12a90, #cb4679, #e16462, #f1834c, #fca636, #fcce25, #fcce25);
   overflow: hidden;
@@ -464,6 +474,7 @@ body {
 
 #tag-line {
   position: absolute;
+  padding-top: 1.5%;
   padding-left: 30%;
 }
 
@@ -471,7 +482,7 @@ body {
   width: 40vw;
   position: absolute;
   top: 25%;
-  margin-left: -7%;
+  margin-left: -6%;
 }
 
 #controller-inside-img img {
@@ -483,7 +494,7 @@ body {
   width: 40vw;
   position: absolute;
   top: 18%;
-  margin-left: 3%;
+  margin-left: 7%;
 }
 
 #controller-shell-img  img {
@@ -495,7 +506,7 @@ body {
   width: 40vw;
   position: absolute;
   top: 35%;
-  margin-left: 13%;
+  margin-left: 20%;
 }
 
 #controller-modules-img img {
@@ -503,10 +514,103 @@ body {
   transform: scaleX(-1);
 }
 
+#modular-tagline-line {
+  position: absolute;
+  width: 10vw;
+  top: 35vh;
+  right: 38vw;
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+
+#durable-tagline-line {
+  position: absolute;
+  width: 35vw;
+  top: 50vh;
+  right: 38vw;
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+
+#precise-tagline-line {
+  position: absolute;
+  width: 50vw;
+  top: 68vh;
+  right: 38vw;
+  opacity: 0.2;
+  transition: all 0.3s;
+}
+
+#extra-taglines-container {
+  position: absolute;
+  width: 25vw;
+  left: 63vw;
+  top: 32.5vh;
+  height: 39vh;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.0);
+}
+
+#modular-tagline-content {
+  position: absolute;
+  border-radius: 2vh;
+  padding-left: 3%;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 0%;
+  height: 17%;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+#modular-tagline-content:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#durable-tagline-content {
+  position: absolute;
+  border-radius: 2vh;
+  padding-left: 3%;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 37%;
+  height: 17%;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+#durable-tagline-content:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+#precise-tagline-content {
+  position: absolute;
+  border-radius: 2vh;
+  padding-left: 3%;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: 83%;
+  height: 17%;
+  width: 100%;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+#precise-tagline-content:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#call-to-action {
+  position: absolute;
+  top: 88vh;
+  right: 6vw;
+  opacity: 0.75;
+}
+
 #main-content-1-divider {
   position: absolute;
   background-color: black;
-  top: 50vh;
+  top: 95vh;
   width: 100vw;
   height: 3vh;
 }
@@ -522,6 +626,267 @@ body {
   margin-top: 2vh;
   top: 100vh;
   transition: margin-top 0.5s, top 0.5s;
+}
+
+#tagline-maincontent2 {
+  position: absolute;
+  left: 2vw;
+  opacity: 1.0;
+  transition: opacity 0.1s;
+}
+
+.designer {
+  /*background-color: rgba(255, 128, 128, 0.3); /* Debug */
+}
+
+.slot {
+  position: absolute;
+  width: 17%;
+  height: 17%;
+  cursor: pointer;
+}
+
+.dynamic-controller-part {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.dynamic-controller-part img {
+  left: 0%;
+  width: 100%;
+}
+
+.jsbevel {
+   mix-blend-mode: overlay;
+}
+
+.no-touchy {
+  position: absolute;
+  pointer-events: none;
+  left: 0%;
+}
+
+.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+
+  /*
+    Introduced in IE 10.
+    See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+  */
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#controller-buttons-container {
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 0.5vw;
+  z-index: 1001;
+  background-color: rgba(255, 255, 255, 0.0);
+  position: absolute;
+  top: 55vh;
+  left: 3vw;
+  width: 58vw;
+  height: 35vh;
+}
+
+
+#body-color-buttons {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: skewX(15deg);
+  display: grid;
+  grid-auto-flow: column;
+  /*grid-auto-columns: 4vw;*/
+  grid-column-gap: 0.5vw;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  width: 75%;
+  height: 100%;
+}
+
+#faceplate-color-buttons {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: skewX(15deg);
+  display: grid;
+  grid-auto-flow: column;
+  /*grid-auto-columns: 4vw;*/
+  grid-column-gap: 0.5vw;
+  margin-left: 2vw;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  width: 100%;
+  height: 100%;
+}
+
+#module-color-buttons {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: skewX(15deg);
+  display: grid;
+  grid-auto-flow: column;
+  border-radius: 1vw;
+  padding: 0.5vw;
+  grid-column-gap: 0.5vw;
+  margin-left: 4vw;
+  width: 75%;
+  height: 100%;
+}
+
+.color-button {
+  background-color: white;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  opacity: 0.7;
+  border-radius: 0.3vw;
+  cursor: pointer;
+  transition: all 0.1s;
+  overflow: hidden;
+}
+
+.color-button:hover {
+  opacity: 1.0;
+  width: 100%;
+  height: 100%;
+}
+
+.color-button:active {
+  width: 110%;
+  height: 110%;
+}
+
+.c1 { /* Silver */
+  background-color: #f2f2f2;
+}
+.c2{ /* Black */
+  background-color: #000000;
+}
+.c3 { /* Orange */
+  background-color: #ff6600;
+}
+.c4 { /* Purple */
+  background-color: #9900cc;
+}
+.c5 { /* Blue */
+  background-color: #1a1aff;
+}
+.c6 { /* Red */
+  background-color: #e60000;
+}
+.c7 { /* Green */
+  background-color: #00b300;
+}
+.c8 { /* Cyan */
+  background-color: #00e6e6;
+}
+.c9 { /* Yellow */
+  background-color: #ffff00;
+}
+.s1 {
+  background-color: #313131;
+  background-image: url("../img/Script/PC10.png");
+  background-size: 400% 400%;
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+}
+.s2 {
+  background-color: #313131;
+  background-image: url("../img/Script/PC11.png");
+  background-size: 400% 400%;
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+}
+.s3 {
+  background-color: #313131;
+  background-image: url("../img/Script/PC12.png");
+  background-size: 400% 400%;
+  background-position: 50% 15%;
+  background-repeat: no-repeat;
+}
+
+#controller-designer-container {
+  position: absolute;
+  top: 10vh;
+  width: 45vw;
+  height: 45vw;
+  left: 50vw;
+}
+
+#controller-designer-container img {
+  position: absolute;
+  width: 100%;
+}
+
+#controller-body {
+
+}
+
+#controller-faceplate {
+
+}
+
+#controller-modules img {
+  width: 100%;
+}
+
+#jsbevel-slot-1 {
+  opacity: 1.0;
+}
+
+#jsbevel-slot-2 {
+  opacity: 0.0;
+}
+
+#jsbevel-slot-3 {
+  opacity: 1.0;
+}
+
+#jsbevel-slot-4 {
+  opacity: 0.0;
+}
+
+#controller-slot-1 {
+  opacity: 1.0;
+  transition: opacity 0.1s;
+}
+
+#controller-slot-2 {
+  opacity: 1.0;
+  transition: opacity 0.1s;
+}
+
+#controller-slot-3 {
+  opacity: 1.0;
+  transition: opacity 0.1s;
+}
+
+#controller-slot-4 {
+  opacity: 1.0;
+  transition: opacity 0.1s;
+}
+
+#slot-1-click {
+  left: 20%;
+  top: 5%;
+}
+
+#slot-2-click {
+  left: 22%;
+  top: 24%;
+}
+
+#slot-3-click {
+  left: 40%;
+  top: 37%;
+}
+
+#slot-4-click {
+  left: 60%;
+  top: 24%;
+  width: 23%;
+  height: 20%;
 }
 
 /*controllerImage.js necessary CSS */
