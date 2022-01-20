@@ -9,7 +9,7 @@
     <title>Project Imperium</title>
     <link rel="shortcut icon" href="img/ProjectImperiumLogo.svg" type="image/x-icon">
   </head>
-  <body onload="initAttention()">
+  <body onload="initAttention(); URLChecker();">
 
       <div id="menu-bar">
           <div id="home-button" class="menu-button" onclick="MenuBarButtonNav(0)">
@@ -131,6 +131,7 @@
 
 <div onwheel="ScrollCheck(event)" id="main-content-2">
   <h1 id="tagline-maincontent2">Go Ahead</h1>
+  <div onclick="URLCopy()" class="share-button" id="maincontent2-share-button"></div>
   <div id="controller-buttons-container">
   <div id="body-color-buttons">
     <div class="color-button c1" onclick="CBanim(1)"></div>
