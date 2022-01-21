@@ -1,3 +1,4 @@
+var adoURL = import("./Ado-URL.js")
 var controllerBody = document.getElementById('controller-body').getElementsByTagName('img')[0];
 var controllerFaceplate = document.getElementById('controller-faceplate').getElementsByTagName('img')[0];
 var controllerModules = document.getElementById('controller-modules').getElementsByTagName('img')[0];
@@ -17,21 +18,9 @@ var slot1click = document.getElementById('slot-1-click');
 var slot2click = document.getElementById('slot-2-click');
 var slot3click = document.getElementById('slot-3-click');
 var slot4click = document.getElementById('slot-4-click');
-
-function GetParam(key) {
-  var address = window.location.search;
-  var paramSearch = new URLSearchParams(address);
-  return paramSearch.get(key);
-}
-
-//let s1SP = GetParam('s1');
-//let s2SP = GetParam('s2');
-//let s3SP = GetParam('s3');
-//let s4SP = GetParam('s4');
-//let bcSP = GetParam('bC');
-//let fcSP = GetParam('fC');
-//let mcSP = GetParam('mC');
-
+var bodyButtons = document.getElementById('body-color-buttons');
+var faceplateButtons = document.getElementById('faceplate-color-buttons');
+var moduleButtons = document.getElementById('module-color-buttons');
 var imgPath = "img/Script/"
 
 // slotTracker: 1 = Joystick, 2 = D-Pad, 3 = Face Buttons
@@ -55,13 +44,13 @@ function InRange(x, min, max) {
 }
 
 function URLChecker() {
-  var s1SP = GetParam('s1');
-  var s2SP = GetParam('s2');
-  var s3SP = GetParam('s3');
-  var s4SP = GetParam('s4');
-  var bcSP = GetParam('bC');
-  var fcSP = GetParam('fC');
-  var mcSP = GetParam('mC');
+  var s1SP = URL_GetSearchParam('s1');
+  var s2SP = URL_GetSearchParam('s2');
+  var s3SP = URL_GetSearchParam('s3');
+  var s4SP = URL_GetSearchParam('s4');
+  var bcSP = URL_GetSearchParam('bC');
+  var fcSP = URL_GetSearchParam('fC');
+  var mcSP = URL_GetSearchParam('mC');
   //
   switch (parseInt(s1SP)) {
     case 1:
@@ -134,21 +123,21 @@ function URLChecker() {
 
   switch (rC_bcSP) {
     case true:
-      CBanim(parseInt(bcSP));
+      CBanim(parseInt(bcSP), "perm");
       break;
     default:
       break;
   }
   switch (rC_fcSP) {
     case true:
-      PCanim(parseInt(fcSP));
+      PCanim(parseInt(fcSP), "perm");
       break;
     default:
       break;
   }
   switch (rC_mcSP) {
     case true:
-      MCanim(parseInt(mcSP));
+      MCanim(parseInt(mcSP), "perm");
       break;
     default:
       break;
@@ -164,16 +153,19 @@ function SlotIncrement(whichSlot) {
         slot1.src = "img/Script/DP1.png";
         jsbevel1.style.opacity = "0.0";
         slotTracker1 = 2;
+        URL_Change('param', 'set', 's1', String(slotTracker1));
         break;
       case 2:
         slot1.src = "img/Script/FB1.png";
         jsbevel1.style.opacity = "0.0";
         slotTracker1 = 3;
+        URL_Change('param', 'set', 's1', String(slotTracker1));
         break;
       case 3:
         slot1.src = "img/Script/JS1.png";
         jsbevel1.style.opacity = "1.0";
         slotTracker1 = 1;
+        URL_Change('param', 'set', 's1', String(slotTracker1));
         break;
     }
   } else if (whichSlot == 2) {
@@ -182,16 +174,19 @@ function SlotIncrement(whichSlot) {
         slot2.src = "img/Script/DP2.png";
         jsbevel2.style.opacity = "0.0";
         slotTracker2 = 2;
+        URL_Change('param', 'set', 's2', String(slotTracker2));
         break;
       case 2:
         slot2.src = "img/Script/FB2.png";
         jsbevel2.style.opacity = "0.0";
         slotTracker2 = 3;
+        URL_Change('param', 'set', 's2', String(slotTracker2));
         break;
       case 3:
         slot2.src = "img/Script/JS2.png";
         jsbevel2.style.opacity = "1.0";
         slotTracker2 = 1;
+        URL_Change('param', 'set', 's2', String(slotTracker2));
         break;
     }
   } else if (whichSlot == 3) {
@@ -200,16 +195,19 @@ function SlotIncrement(whichSlot) {
         slot3.src = "img/Script/DP3.png";
         jsbevel3.style.opacity = "0.0";
         slotTracker3 = 2;
+        URL_Change('param', 'set', 's3', String(slotTracker3));
         break;
       case 2:
         slot3.src = "img/Script/FB3.png";
         jsbevel3.style.opacity = "0.0";
         slotTracker3 = 3;
+        URL_Change('param', 'set', 's3', String(slotTracker3));
         break;
       case 3:
         slot3.src = "img/Script/JS3.png";
         jsbevel3.style.opacity = "1.0";
         slotTracker3 = 1;
+        URL_Change('param', 'set', 's3', String(slotTracker3));
         break;
     }
   } else if (whichSlot == 4) {
@@ -218,22 +216,24 @@ function SlotIncrement(whichSlot) {
         slot4.src = "img/Script/DP4.png";
         jsbevel4.style.opacity = "0.0";
         slotTracker4 = 2;
+        URL_Change('param', 'set', 's4', String(slotTracker4));
         break;
       case 2:
         slot4.src = "img/Script/FB4.png";
         jsbevel4.style.opacity = "0.0";
         slotTracker4 = 3;
+        URL_Change('param', 'set', 's4', String(slotTracker4));
         break;
       case 3:
         slot4.src = "img/Script/JS4.png";
         jsbevel4.style.opacity = "1.0";
         slotTracker4 = 1;
+        URL_Change('param', 'set', 's4', String(slotTracker4));
         break;
     }
   } else {
     console.log("Function SlotIncrement() has bad parameter!")
   }
-  URLChanger()
 }
 
 slot1click.addEventListener("mouseenter", function() {SlotHighlight(1, "focus")});
@@ -312,25 +312,59 @@ function SlotHighlight(whichSlot, whichAnim) {
   }
 
 
-function CBanim(c) {
-  controllerBody.src = imgPath + "CB" + c + ".png";
-  bC = c;
-  EasterEgg();
-  URLChanger()
+bodyButtons.addEventListener('mouseleave', function() {CBanim(0, "reset")});
+faceplateButtons.addEventListener('mouseleave', function() {PCanim(0, "reset")});
+moduleButtons.addEventListener('mouseleave', function() {MCanim(0, "reset")});
+
+function CBanim(c, whichAnim) { //Parameter whichAnim accepts "perm", "temp", and "reset"
+  switch (whichAnim) {
+    case "perm":
+      controllerBody.src = imgPath + "CB" + c + ".png";
+      bC = c;
+      EasterEgg();
+      URL_Change('param', 'set', 'bC', String(bC));
+      break;
+    case "temp":
+      controllerBody.src = imgPath + "CB" + c + ".png";
+      break;
+    case "reset":
+      controllerBody.src = imgPath + "CB" + bC + ".png";
+      break;
+  }
 }
 
-function PCanim(c) {
-  controllerFaceplate.src = imgPath + "PC" + c + ".png";
-  fC = c;
-  EasterEgg();
-  URLChanger()
+function PCanim(c, whichAnim) {
+  switch (whichAnim) {
+    case "perm":
+      controllerFaceplate.src = imgPath + "PC" + c + ".png";
+      fC = c;
+      EasterEgg();
+      URL_Change('param', 'set', 'fC', String(fC));
+      break;
+    case "temp":
+      controllerFaceplate.src = imgPath + "PC" + c + ".png";
+      break;
+    case "reset":
+      controllerFaceplate.src = imgPath + "PC" + fC + ".png";
+      break;
+  }
 }
 
-function MCanim(c) {
-  controllerModules.src = imgPath + "MC" + c + ".png";
-  mC = c;
-  EasterEgg();
-  URLChanger()
+function MCanim(c, whichAnim) {
+  switch (whichAnim) {
+    case "perm":
+      controllerModules.src = imgPath + "MC" + c + ".png";
+      mC = c;
+      EasterEgg();
+      URL_Change('param', 'set', 'mC', String(mC));
+      break;
+    case "temp":
+      controllerModules.src = imgPath + "MC" + c + ".png";
+      break;
+    case "reset":
+      controllerModules.src = imgPath + "MC" + mC + ".png";
+      break;
+  }
 }
 
 var easterEggText = document.getElementById('tagline-maincontent2');
@@ -383,17 +417,4 @@ function EasterEgg() {
       easterEggText.innerHTML = "Go Ahead";
       break;
   }
-}
-
-function URLChanger() {
-  //const currentUrl = window.location.href;
-  //const url = new URLSearchParams(window.location.search);
-  //url.set("script", String(slotTracker1) + String(slotTracker2) + String(slotTracker3) + String(slotTracker4) + String(bC) + String(mC) + String(fC));
-  var scriptQueery = "?s1=" + String(slotTracker1) + "&s2=" + String(slotTracker2) + "&s3=" + String(slotTracker3) + "&s4=" + String(slotTracker4) + "&bC=" + String(bC) + "&fC=" + String(fC) + "&mC=" + String(mC);
-  history.replaceState('data to be passed', 'Project Imperium', scriptQueery);
-  //window.location.search = url;
-}
-
-function URLCopy() {
-  navigator.clipboard.writeText(window.location.href);
 }
