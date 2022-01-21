@@ -31,8 +31,8 @@ h3 {
 
 
 body {
-  background: rgba(70,1,105,1);
-    background-image: linear-gradient(62deg, #460169 0%, #000652 89%);
+  opacity: 0.0;
+  background-color: #242424;
   width: 100vw;
   height: 100vh;
   overflow-y: hidden;
@@ -42,8 +42,47 @@ body {
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+  transition: opacity 0.2s;
 }
 
+#background-div {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(70,1,105,1);
+    background-image: linear-gradient(62deg, #460169 0%, #000652 89%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Loading Anim Stuff */
+
+#loa-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  left: -100vw;
+  background: #242424;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 1.0;
+  transition: opacity 0.3s;
+}
+
+#loa-image {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  left: 50vw;
+  top: 45vh;
+  opacity: 1.0;
+  transition: opacity 0.2s;
+}
+
+#loa-image img {
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
 
 /* Menu Related */
 

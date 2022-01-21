@@ -1,3 +1,6 @@
+var adoURL = import("./Ado-URL_V1.js")
+var loaContainer = document.getElementById('loa-container');
+var loaImage = document.getElementById('loa-image');
 var menuBar = document.getElementById('menu-bar');
 var homeButton = document.getElementById('home-button');
 var designButton = document.getElementById('design-button');
@@ -29,6 +32,21 @@ menuBar.addEventListener("mouseleave", MouseCheckLeave);
 
 function DoNothing() {
   // Does literally nothing
+}
+
+function InRange(x, min, max) {
+  //console.log(x >= min && x <= max);
+  return x >= min && x <= max;
+}
+
+function LoaAnim() {
+  loaContainer.style['pointer-events'] = "all";
+  loaContainer.style.left = "0vw";
+  setTimeout(function() {
+    loaContainer.style['pointer-events'] = "none";
+    loaContainer.style.opacity = "0.0";
+    loaImage.style.opacity = "0.0";
+  }, 550);
 }
 
 function MouseCheckEnter() {
@@ -219,6 +237,7 @@ function NavArrowAnim(slideInit, indicatorAnimStatus) {
         NavIndicatorAnim("ProjectImperiumLogo.svg", false);
         break;
       }
+      URL_Change('hash', 'set', '0', '0');
   } else if (slideInit === -100) {
     navArrowUp.style["pointer-events"] = "all";
     navArrowUp.style.opacity = "1.0";
@@ -232,6 +251,7 @@ function NavArrowAnim(slideInit, indicatorAnimStatus) {
           NavIndicatorAnim("DesignLogo.svg", false);
           break;
       }
+      URL_Change('hash', 'set', '0', '1');
   } else if (slideInit === -200) {
     navArrowUp.style["pointer-events"] = "all";
     navArrowUp.style.opacity = "1.0";
@@ -245,6 +265,7 @@ function NavArrowAnim(slideInit, indicatorAnimStatus) {
           NavIndicatorAnim("PrototypeLogo.svg", false);
           break;
     }
+    URL_Change('hash', 'set', '0', '2');
   } else if (slideInit === -300) {
     navArrowUp.style["pointer-events"] = "all";
     navArrowUp.style.opacity = "1.0";
@@ -258,6 +279,7 @@ function NavArrowAnim(slideInit, indicatorAnimStatus) {
           NavIndicatorAnim("ContactLogo.svg", false);
           break;
   }
+  URL_Change('hash', 'set', '0', '3');
   } else {
     console.log("Function 'NavArrowAnim' recieved bad parameter!");
   }
@@ -322,4 +344,25 @@ function ScrollCheck(event) {
   scrollDi = event.deltaY;
   //console.log("Function 'ScrollCheck' ran, Var 'scrollDi' = " + scrollDi);
   SlideMove(scrollDi)
+}
+
+function SlideURL() {
+  if (InRange(parseInt(URL_GetHash()), 0, 3)) {
+    switch(String(URL_GetHash())){
+      case "0":
+        mainBody.style.opacity = "1.0";
+        url_slide_set = URL_GetHash();
+        MenuBarButtonNav(parseInt(url_slide_set) * (-100));
+        break;
+      default:
+        mainBody.style.opacity = "1.0";
+        LoaAnim();
+        url_slide_set = URL_GetHash();
+        MenuBarButtonNav(parseInt(url_slide_set) * (-100));
+        break;
+    }
+  } else {
+    mainBody.style.opacity = "1.0";
+    return;
+  }
 }

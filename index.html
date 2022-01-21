@@ -9,8 +9,11 @@
     <title>Project Imperium</title>
     <link rel="shortcut icon" href="img/ProjectImperiumLogo.svg" type="image/x-icon">
   </head>
-  <body onload="initAttention(); URLChecker();">
-
+  <body onload="initAttention(); URLChecker(); SlideURL();">
+    <div id="background-div"></div>
+    <div id="loa-container">
+      <div id="loa-image"><img src="img/ProjectImperiumLogo.svg"></div>
+    </div>
       <div id="menu-bar">
           <div id="home-button" class="menu-button" onclick="MenuBarButtonNav(0)">
             <div id="nav-button-img-home"><img src="img/ProjectImperiumLogo.svg"></div>
@@ -33,6 +36,7 @@
             <div id="nav-button-text-credits"><p>Credits</p></div>
           </div>
       </div>
+
 
       <div id="credits-container">
         <div id="dismiss-credits"></div>
@@ -121,7 +125,7 @@
       </div>
       <div id="precise-tagline-content">
         <h3>Precise.</h3>
-        <h4 id="precise-tagline-text">• Minimal Delay<br>• USB-C Connector<br>• Did we mentions it's Open Source?<br></h4>
+        <h4 id="precise-tagline-text">• Minimal Delay<br>• USB-C Connector<br>• Did we mention it's Open Source?<br></h4>
       </div>
     </div>
     <h4 id="call-to-action">Scroll For More</h4>
@@ -220,7 +224,7 @@
     <input type="submit" id="send-email" value="Send Message">
   </form>
 </div> <!-- End of main-content-4 -->
-<script src="js/Ado-URL.js"></script>
+<script src="js/Ado-URL_V1.js"></script>
 <script src="js/alternate-controller.js"></script>
 <script src="js/contact.js"></script>
 <script src="js/anim.js"></script>

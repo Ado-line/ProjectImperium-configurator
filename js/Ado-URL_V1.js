@@ -1,4 +1,4 @@
-var scriptName = "Ado-URL.js"
+var scriptName = "Ado-URL_V1.js"
 
 var funcLine_URL_GetSearchParam = "4";
 function URL_GetSearchParam(key) { //  Parameter given **must** be a string!
