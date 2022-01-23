@@ -131,48 +131,59 @@
     <h4 id="call-to-action">Scroll For More</h4>
   </div>
     <div id="main-content-1-divider"></div>
+    <p class="disclaimer">*Design is subject to change. Controller shape, colors, and functionality are not final.</p>
 </div> <!-- End of main-content-1 -->
 
 <div onwheel="ScrollCheck(event)" id="main-content-2">
   <h1 id="tagline-maincontent2">Go Ahead</h1>
-  <div onclick="URLCopy()" class="share-button" id="maincontent2-share-button"></div>
+  <div id="tagline-extra-maincontent2">
+    <h4>Give it a try<hr></h4>
+    <p>You can design your controller here, we have more colors planned in the future!<br><br>
+      Click the modules to change them.
+    </p>
+  </div>
+  <p class="disclaimer">*Design is subject to change. Controller shape, colors, and functionality are not final.</p>
+  <div onclick="URL_Copy(); aca_Anim('#339966', 'URL Copied to clipboard', 2000);" class="share-button" id="maincontent2-share-button"><img src="img/Generic/Share-Button.svg"></div>
   <div id="controller-buttons-container">
-  <div id="body-color-buttons">
-    <div id="p1b1" class="color-button c1" onmouseover="CBanim(1, 'temp')" onclick="CBanim(1, 'perm')"></div>
-    <div id="p1b2" class="color-button c2" onmouseover="CBanim(2, 'temp')" onclick="CBanim(2, 'perm')"></div>
-    <div id="p1b3" class="color-button c3" onmouseover="CBanim(3, 'temp')" onclick="CBanim(3, 'perm')"></div>
-    <div id="p1b4" class="color-button c4" onmouseover="CBanim(4, 'temp')" onclick="CBanim(4, 'perm')"></div>
-    <div id="p1b5" class="color-button c5" onmouseover="CBanim(5, 'temp')" onclick="CBanim(5, 'perm')"></div>
-    <div id="p1b6" class="color-button c6" onmouseover="CBanim(6, 'temp')" onclick="CBanim(6, 'perm')"></div>
-    <div id="p1b7" class="color-button c7" onmouseover="CBanim(7, 'temp')" onclick="CBanim(7, 'perm')"></div>
-    <div id="p1b8" class="color-button c8" onmouseover="CBanim(8, 'temp')" onclick="CBanim(8, 'perm')"></div>
-    <div id="p1b9" class="color-button c9" onmouseover="CBanim(9, 'temp')" onclick="CBanim(9, 'perm')"></div>
-  </div>
-  <div id="faceplate-color-buttons">
-    <div id="p2b1" class="color-button c1" onmouseover="PCanim(1, 'temp')" onclick="PCanim(1,'perm')"></div>
-    <div id="p2b2" class="color-button c2" onmouseover="PCanim(2, 'temp')" onclick="PCanim(2,'perm')"></div>
-    <div id="p2b3" class="color-button c3" onmouseover="PCanim(3, 'temp')" onclick="PCanim(3,'perm')"></div>
-    <div id="p2b4" class="color-button c4" onmouseover="PCanim(4, 'temp')" onclick="PCanim(4,'perm')"></div>
-    <div id="p2b5" class="color-button c5" onmouseover="PCanim(5, 'temp')" onclick="PCanim(5,'perm')"></div>
-    <div id="p2b6" class="color-button c6" onmouseover="PCanim(6, 'temp')" onclick="PCanim(6,'perm')"></div>
-    <div id="p2b7" class="color-button c7" onmouseover="PCanim(7, 'temp')" onclick="PCanim(7,'perm')"></div>
-    <div id="p2b8" class="color-button c8" onmouseover="PCanim(8, 'temp')" onclick="PCanim(8,'perm')"></div>
-    <div id="p2b9" class="color-button c9" onmouseover="PCanim(9, 'temp')" onclick="PCanim(9,'perm')"></div>
-    <div id="p2b10" class="color-button s1" onmouseover="PCanim(10, 'temp')" onclick="PCanim(10,'perm')"></div>
-    <div id="p2b11" class="color-button s2" onmouseover="PCanim(11, 'temp')" onclick="PCanim(11,'perm')"></div>
-    <div id="p2b12" class="color-button s3" onmouseover="PCanim(12, 'temp')" onclick="PCanim(12,'perm')"></div>
-  </div>
-  <div id="module-color-buttons">
-    <div id="p3b1" class="color-button c1" onmouseover="MCanim(1, 'temp')" onclick="MCanim(1,'perm')"></div>
-    <div id="p3b2" class="color-button c2" onmouseover="MCanim(2, 'temp')" onclick="MCanim(2,'perm')"></div>
-    <div id="p3b3" class="color-button c3" onmouseover="MCanim(3, 'temp')" onclick="MCanim(3,'perm')"></div>
-    <div id="p3b4" class="color-button c4" onmouseover="MCanim(4, 'temp')" onclick="MCanim(4,'perm')"></div>
-    <div id="p3b5" class="color-button c5" onmouseover="MCanim(5, 'temp')" onclick="MCanim(5,'perm')"></div>
-    <div id="p3b6" class="color-button c6" onmouseover="MCanim(6, 'temp')" onclick="MCanim(6,'perm')"></div>
-    <div id="p3b7" class="color-button c7" onmouseover="MCanim(7, 'temp')" onclick="MCanim(7,'perm')"></div>
-    <div id="p3b8" class="color-button c8" onmouseover="MCanim(8, 'temp')" onclick="MCanim(8,'perm')"></div>
-    <div id="p3b9" class="color-button c9" onmouseover="MCanim(9, 'temp')" onclick="MCanim(9,'perm')"></div>
-  </div>
+    <h4 id="buttons-label1" class="button-labels">Body:</h4>
+    <div id="body-color-buttons">
+      <div id="p1b1" class="color-button c1" onmouseover="CBanim(1, 'temp')" onclick="CBanim(1, 'perm')"></div>
+      <div id="p1b2" class="color-button c2" onmouseover="CBanim(2, 'temp')" onclick="CBanim(2, 'perm')"></div>
+      <div id="p1b3" class="color-button c3" onmouseover="CBanim(3, 'temp')" onclick="CBanim(3, 'perm')"></div>
+      <div id="p1b4" class="color-button c4" onmouseover="CBanim(4, 'temp')" onclick="CBanim(4, 'perm')"></div>
+      <div id="p1b5" class="color-button c5" onmouseover="CBanim(5, 'temp')" onclick="CBanim(5, 'perm')"></div>
+      <div id="p1b6" class="color-button c6" onmouseover="CBanim(6, 'temp')" onclick="CBanim(6, 'perm')"></div>
+      <div id="p1b7" class="color-button c7" onmouseover="CBanim(7, 'temp')" onclick="CBanim(7, 'perm')"></div>
+      <div id="p1b8" class="color-button c8" onmouseover="CBanim(8, 'temp')" onclick="CBanim(8, 'perm')"></div>
+      <div id="p1b9" class="color-button c9" onmouseover="CBanim(9, 'temp')" onclick="CBanim(9, 'perm')"></div>
+    </div>
+    <h4 id="buttons-label2" class="button-labels">Faceplate:</h4>
+    <div id="faceplate-color-buttons">
+      <div id="p2b1" class="color-button c1" onmouseover="PCanim(1, 'temp')" onclick="PCanim(1,'perm')"></div>
+      <div id="p2b2" class="color-button c2" onmouseover="PCanim(2, 'temp')" onclick="PCanim(2,'perm')"></div>
+      <div id="p2b3" class="color-button c3" onmouseover="PCanim(3, 'temp')" onclick="PCanim(3,'perm')"></div>
+      <div id="p2b4" class="color-button c4" onmouseover="PCanim(4, 'temp')" onclick="PCanim(4,'perm')"></div>
+      <div id="p2b5" class="color-button c5" onmouseover="PCanim(5, 'temp')" onclick="PCanim(5,'perm')"></div>
+      <div id="p2b6" class="color-button c6" onmouseover="PCanim(6, 'temp')" onclick="PCanim(6,'perm')"></div>
+      <div id="p2b7" class="color-button c7" onmouseover="PCanim(7, 'temp')" onclick="PCanim(7,'perm')"></div>
+      <div id="p2b8" class="color-button c8" onmouseover="PCanim(8, 'temp')" onclick="PCanim(8,'perm')"></div>
+      <div id="p2b9" class="color-button c9" onmouseover="PCanim(9, 'temp')" onclick="PCanim(9,'perm')"></div>
+      <div id="p2b10" class="color-button s1" onmouseover="PCanim(10, 'temp')" onclick="PCanim(10,'perm')"></div>
+      <div id="p2b11" class="color-button s2" onmouseover="PCanim(11, 'temp')" onclick="PCanim(11,'perm')"></div>
+      <div id="p2b12" class="color-button s3" onmouseover="PCanim(12, 'temp')" onclick="PCanim(12,'perm')"></div>
+    </div>
+    <h4 id="buttons-label3" class="button-labels">Modules:</h4>
+    <div id="module-color-buttons">
+      <div id="p3b1" class="color-button c1" onmouseover="MCanim(1, 'temp')" onclick="MCanim(1,'perm')"></div>
+      <div id="p3b2" class="color-button c2" onmouseover="MCanim(2, 'temp')" onclick="MCanim(2,'perm')"></div>
+      <div id="p3b3" class="color-button c3" onmouseover="MCanim(3, 'temp')" onclick="MCanim(3,'perm')"></div>
+      <div id="p3b4" class="color-button c4" onmouseover="MCanim(4, 'temp')" onclick="MCanim(4,'perm')"></div>
+      <div id="p3b5" class="color-button c5" onmouseover="MCanim(5, 'temp')" onclick="MCanim(5,'perm')"></div>
+      <div id="p3b6" class="color-button c6" onmouseover="MCanim(6, 'temp')" onclick="MCanim(6,'perm')"></div>
+      <div id="p3b7" class="color-button c7" onmouseover="MCanim(7, 'temp')" onclick="MCanim(7,'perm')"></div>
+      <div id="p3b8" class="color-button c8" onmouseover="MCanim(8, 'temp')" onclick="MCanim(8,'perm')"></div>
+      <div id="p3b9" class="color-button c9" onmouseover="MCanim(9, 'temp')" onclick="MCanim(9,'perm')"></div>
+    </div>
 </div>
   <div id="controller-designer-container" class="designer unselectable">
     <img id="triggers" class="no-touchy" src="/img/Script/Triggers.png">
@@ -204,7 +215,6 @@
 <div onwheel="ScrollCheck(event)" id="main-content-4">
   <h2>Wanna get in touch?</h2>
   <p>Send us a message below and we'll get back to you soon!</p>
-
   <form name="message-form" id="contact-form" action="javascript:void(0);" onsubmit="SendMessage();">
     <label id="email-label" for="email-input">Email Address:</label>
     <input form="contact-form" name="email-input" required type="email" id="email-input" placeholder="you@example.com" value="">
