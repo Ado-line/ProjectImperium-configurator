@@ -21,7 +21,7 @@ var slot4click = document.getElementById('slot-4-click');
 var bodyButtons = document.getElementById('body-color-buttons');
 var faceplateButtons = document.getElementById('faceplate-color-buttons');
 var moduleButtons = document.getElementById('module-color-buttons');
-var imgPath = "img/Script/"
+var imgPath = "./img/Script/"
 
 // slotTracker: 1 = Joystick, 2 = D-Pad, 3 = Face Buttons
 
