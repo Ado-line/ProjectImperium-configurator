@@ -1009,6 +1009,130 @@ body {
   transition: margin-top 0.5s, top 0.5s;
 }
 
+#mainContent3-grid-container {
+  position: absolute;
+  left: 3vw;
+  top: 3vh;
+  width: 90vw;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.mainContent3-grid-item {
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 40% 60%;
+  min-height: 0px;
+  transition: opacity 0.4s, height 0.4s;
+}
+
+.mainContent3-grid-item img {
+  position: relative;
+  min-height: 0px;
+  padding: 1%;
+  padding-right: 10%;
+  height: 100%;
+  width: 100%;
+  transition: inherit;
+}
+
+.mainContent3-grid-item-text {
+  min-height: 0px;
+  position: relative;
+  border-radius: 3vw;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  background-color: rgba(255, 255, 255, 0.1);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mainContent3-grid-item-text h2 {
+  background-color: rgba(255, 255, 255, 0.0);
+  border-radius: 2vw;
+  padding-left: 1vw;
+  cursor: pointer;
+}
+
+.mainContent3-grid-item-text h2:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mainContent3-grid-item-text h2:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.mainContent3-grid-item-text h4 {
+  padding-left: 1vw;
+}
+
+#mainContent3-grid-item1 {
+  height: 64%;
+}
+
+#mainContent3-grid-item1-img {
+  opacity: 0.9;
+}
+
+#mainContent3-grid-item1-h4 {
+  height: 70%;
+  overflow-y: auto;
+  padding-right: 1vw;
+  opacity: 1.0;
+  transition: opacity 0.4s;
+}
+
+#mainContent3-grid-item2 {
+  height: 12%;
+}
+
+#mainContent3-grid-item2-img {
+  opacity: 0.4;
+}
+
+#mainContent3-grid-item2-h4 {
+  height: 70%;
+  overflow-y: auto;
+  padding-right: 1vw;
+  opacity: 0.0;
+  transition: opacity 0.4s;
+}
+
+#mainContent3-grid-item3 {
+  height: 12%;
+}
+
+#mainContent3-grid-item3-img {
+  opacity: 0.4;
+}
+
+#mainContent3-grid-item3-h4 {
+  height: 70%;
+  overflow-y: auto;
+  padding-right: 1vw;
+  opacity: 0.0;
+  transition: opacity 0.4s;
+}
+
+#mainContent3-grid-item4 {
+  height: 12%;
+}
+
+#mainContent3-grid-item4-img {
+  opacity: 0.4;
+}
+
+#mainContent3-grid-item4-h4 {
+  height: 70%;
+  overflow-y: auto;
+  padding-right: 1vw;
+  opacity: 0.0;
+  transition: opacity 0.4s;
+}
+
 /* END MAIN CONTENT 3 */
 
 /* MAIN CONTENT 4 */

@@ -24,6 +24,18 @@ var durableTagline = document.getElementById('durable-tagline-content');
 var preciseTagline = document.getElementById('precise-tagline-content');
 var mainContent2 = document.getElementById('main-content-2');
 var mainContent3 = document.getElementById('main-content-3');
+var mc3griditem1 = document.getElementById('mainContent3-grid-item1');
+var mc3griditem2 = document.getElementById('mainContent3-grid-item2');
+var mc3griditem3 = document.getElementById('mainContent3-grid-item3');
+var mc3griditem4 = document.getElementById('mainContent3-grid-item4');
+var mc3gridtext1 = document.getElementById('mainContent3-grid-item1-h4');
+var mc3gridtext2 = document.getElementById('mainContent3-grid-item2-h4');
+var mc3gridtext3 = document.getElementById('mainContent3-grid-item3-h4');
+var mc3gridtext4 = document.getElementById('mainContent3-grid-item4-h4');
+var mc3gridimg1 = document.getElementById('mainContent3-grid-item1-img');
+var mc3gridimg2 = document.getElementById('mainContent3-grid-item2-img');
+var mc3gridimg3 = document.getElementById('mainContent3-grid-item3-img');
+var mc3gridimg4 = document.getElementById('mainContent3-grid-item4-img');
 var mainContent4 = document.getElementById('main-content-4');
 var homeButton = document.getElementById('home-button');
 var mainBody = document.body;
@@ -324,6 +336,73 @@ function SlideMove(scrollDi)  {
 } else {
   DoNothing();
 }
+}
+
+function Mc3Anim(whichAnim) {
+  switch (whichAnim) {
+    case 1:
+      mc3griditem1.style.height = "64%";
+      mc3gridtext1.style.opacity = "1.0";
+      mc3gridimg1.style.opacity = "0.9";
+      mc3griditem2.style.height = "12%";
+      mc3gridtext2.style.opacity = "0.0";
+      mc3gridimg2.style.opacity = "0.4";
+      mc3griditem3.style.height = "12%";
+      mc3gridtext3.style.opacity = "0.0";
+      mc3gridimg3.style.opacity = "0.4";
+      mc3griditem4.style.height = "12%";
+      mc3gridtext4.style.opacity = "0.0";
+      mc3gridimg4.style.opacity = "0.4";
+      break;
+    case 2:
+      mc3griditem2.style.height = "64%";
+      mc3gridtext2.style.opacity = "1.0";
+      mc3gridimg2.style.opacity = "0.9";
+      mc3griditem1.style.height = "12%";
+      mc3gridtext1.style.opacity = "0.0";
+      mc3gridimg1.style.opacity = "0.4";
+      mc3griditem3.style.height = "12%";
+      mc3gridtext3.style.opacity = "0.0";
+      mc3gridimg3.style.opacity = "0.4";
+      mc3griditem4.style.height = "12%";
+      mc3gridtext4.style.opacity = "0.0";
+      mc3gridimg4.style.opacity = "0.4";
+      break;
+    case 3:
+      mc3griditem3.style.height = "64%";
+      mc3gridtext3.style.opacity = "1.0";
+      mc3gridimg3.style.opacity = "0.9";
+      mc3griditem2.style.height = "12%";
+      mc3gridtext2.style.opacity = "0.0";
+      mc3gridimg2.style.opacity = "0.4";
+      mc3griditem1.style.height = "12%";
+      mc3gridtext1.style.opacity = "0.0";
+      mc3gridimg1.style.opacity = "0.4";
+      mc3griditem4.style.height = "12%";
+      mc3gridtext4.style.opacity = "0.0";
+      mc3gridimg4.style.opacity = "0.4";
+      break;
+    case 4:
+      mc3griditem4.style.height = "64%";
+      mc3gridtext4.style.opacity = "1.0";
+      mc3gridimg4.style.opacity = "0.9";
+      mc3griditem2.style.height = "12%";
+      mc3gridtext2.style.opacity = "0.0";
+      mc3gridimg2.style.opacity = "0.4";
+      mc3griditem3.style.height = "12%";
+      mc3gridtext3.style.opacity = "0.0";
+      mc3gridimg3.style.opacity = "0.4";
+      mc3griditem1.style.height = "12%";
+      mc3gridtext1.style.opacity = "0.0";
+      mc3gridimg1.style.opacity = "0.4";
+      break;
+    default:
+      break;
+  }
+}
+
+function SlideScrollStop(event) {
+  event.stopPropagation();
 }
 
 document.onkeydown = function(event) {

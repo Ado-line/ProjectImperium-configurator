@@ -131,7 +131,7 @@
     <h4 id="call-to-action">Scroll For More</h4>
   </div>
     <div id="main-content-1-divider"></div>
-    <p class="disclaimer">*Design is subject to change. Controller shape, colors, and functionality are not final.</p>
+    <p class="disclaimer">*Design is subject to change. Controller shape, colors, parts, and functionality are not final.</p>
 </div> <!-- End of main-content-1 -->
 
 <div onwheel="ScrollCheck(event)" id="main-content-2">
@@ -142,7 +142,7 @@
       Click the modules to change them.
     </p>
   </div>
-  <p class="disclaimer">*Design is subject to change. Controller shape, colors, and functionality are not final.</p>
+  <p class="disclaimer">*Design is subject to change. Controller shape, colors, parts, and functionality are not final.</p>
   <div onclick="URL_Copy(); aca_Anim('#339966', 'URL Copied to clipboard', 2000);" class="share-button" id="maincontent2-share-button"><img src="img/Generic/Share-Button.svg"></div>
   <div id="controller-buttons-container">
     <h4 id="buttons-label1" class="button-labels">Body:</h4>
@@ -208,8 +208,163 @@
 </div> <!-- End of main-content-2 -->
 
 <div onwheel="ScrollCheck(event)" id="main-content-3">
-  <h1>This Be Yet Another Test, slide 3</h1>
-  <h1>Do what you want because a pirate is free!</h1>
+  <div id="mainContent3-grid-container">
+    <div id="mainContent3-grid-item1" class="mainContent3-grid-item">
+      <img id="mainContent3-grid-item1-img" src="img/Generic/Controller-Graphic.svg">
+      <div id="mainContent3-grid-item1-text" class="mainContent3-grid-item-text">
+        <h2 onclick="Mc3Anim(1)">The Basics</h2>
+        <h4 onwheel="SlideScrollStop(event)" id="mainContent3-grid-item1-h4">Some general things are likely to change, especially things like the shape of the controller. The shape of the modules likely won’t change.<br><br>The modules available at launch will be: Joystick, Face Buttons, and D-Pad. These controllers will work out of the box. There will be software that you can use to make custom configurations though!</h4>
+      </div>
+    </div>
+    <div id="mainContent3-grid-item2" class="mainContent3-grid-item">
+      <img id="mainContent3-grid-item2-img" src="img/Generic/Hardware-Graphic.svg">
+      <div id="mainContent3-grid-item2-text" class="mainContent3-grid-item-text">
+        <h2 onclick="Mc3Anim(2)">Hardware</h2>
+        <h4 onwheel="SlideScrollStop(event)" id="mainContent3-grid-item2-h4">• The hardware will be durable, fast, and precise.<br>
+        <br>
+        • Project Imperium controllers will be built to last. Our plans are to use top of the line joysticks and tactile buttons.<br>
+        <br>
+        • The device will have it's own firmware, rather than relying on the host device, this allows for customization between devices.<br>
+        <br>
+        • It will likely use an RP 4080 chip, which supports wireless functionality and has a blazingly fast [INSERT CLOCK SPEED HERE] clock speed.<br>
+        <br>
+        • We even have plans for sillier modules, just to demonstrate the concept to it's fullest potential.
+      </h4>
+      </div>
+    </div>
+    <div id="mainContent3-grid-item3" class="mainContent3-grid-item">
+      <img id="mainContent3-grid-item3-img" src="img/Generic/Software-Graphic.svg">
+      <div id="mainContent3-grid-item3-text" class="mainContent3-grid-item-text">
+        <h2 onclick="Mc3Anim(3)">Software</h2>
+        <h4 onwheel="SlideScrollStop(event)" id="mainContent3-grid-item3-h4">• The software will allow you to remap buttons and even make custom macros.<br>
+        <br>
+        • The software can be used to check if the controller's firmware has been modified in any way, to ensure security and that illegal tournament mods are not being used.<br>
+        <br>
+        • The controller can even be put into a "safe" mode, where only button remaps will be allowed.<br>
+        <br>
+        • Project Imperium controllers <b>should</b> work on nearly any device out of the box. They will work on PC out of the box.<br>
+        <br>
+        • The software will be open source, that way it can be scrutinized by the community.
+      </h4>
+      </div>
+    </div>
+    <div id="mainContent3-grid-item4" class="mainContent3-grid-item">
+      <img id="mainContent3-grid-item4-img" src="img/Generic/FAQ-Graphic.svg">
+      <div id="mainContent3-grid-item4-text" class="mainContent3-grid-item-text">
+        <h2 onclick="Mc3Anim(4)">FAQ</h2>
+        <h4 onwheel="SlideScrollStop(event)" id="mainContent3-grid-item4-h4">
+          <b>• When will this be released?</b><br>
+          <br>
+          - Unfortunately, we don't have a timeline on that yet. We'll make an update on it soon!
+          <br>
+          <br>
+          <b>• Can we see the prototype?</b><br>
+          <br>
+          - All of the software side of the prototype is working, and some physical engineering work has been completed on it. Alas, we were unable to finish the physical product before this site went live.
+          <br>
+          <br>
+          <b>• When can we see the prototype?</b><br>
+          <br>
+          - We are working hard to get it done, we don't have timeline right now. All we can say is soon.
+          <br>
+          <br>
+          <b>• Why did you publish this site before the prototype was finished?</b><br>
+          <br>
+          - We wanted to get the idea out there, and to show that we're serious about this project.
+          <br>
+          <br>
+          <b>• Who's behind this project?</b><br>
+          <br>
+          - You can check in the <u style="cursor: pointer;" onclick="CreditsToggle('open')">credits</u> page!
+          <br>
+          <br>
+          <b>• Are the modules hot-swappable?</b><br>
+          <br>
+          - Yes! You just take off the faceplate, which is magnetically attached, no screws required, to replace the modules. Once the faceplate is re-attached the controller will reboot and that's that!
+          <br>
+          <br>
+          <b>• Why the faceplate?</b><br>
+          <br>
+          - The faceplate serves three purposes:<br>
+          1) It holds the modules in, they will have magnets to keep them secure as well.<br>
+          2) It lets the firmware know the controller modules won't be hot-swapped, and so can use a faster input loop to reduce latency!<br>
+          3) It allows for more customization.
+          <br>
+          <br>
+          <b>• Wait, it can be used without the faceplate?</b><br>
+          <br>
+          - Yes! Indeed it can, the input latency will just be a bit higher, as the controller constantly checks if the modules have changed.
+          <br>
+          <br>
+          <b>• What does "User Programmable" mean?</b><br>
+          <br>
+          - The software for the controller can actually be used to create macros or even interoperate the input as raw data to be processed by something else. We'll be able to go into more detail later.
+          <br>
+          <br>
+          <b>• That sounds dangerous.</b><br>
+          <br>
+          - There is actually a flag that is checked if the controller's firmware has been changed from the default in any way, this is not only to protect our users, but even allow use in tournaments! (We hope.)
+          <br>
+          <br>
+          <b>• We Hope?</b><br>
+          <br>
+          - We need to actually speak to tournament organizers to make sure that our controllers will be allowed. Honestly it will be up to individual communities.
+          <br>
+          <br>
+          <b>• Will this work on multiple systems?</b><br>
+          <br>
+          - It will absolutely work on PC, and probably Xbox variants as well. It <b>should</b> work on any system that accepts X-input devices. Which is most devices.
+          <br>
+          <br>
+          <b>• What about reparability?</b><br>
+          <br>
+          - These controllers will not be black boxes, many of the design documents and software source is going to be open. The controller bodies will strive to be as reparable as possible. The modules might not be as reparable because of their small size, but thankfully you will be able to easily replace them.
+          <br>
+          <br>
+          <b>• How much will it cost?</b><br>
+          <br>
+          - We can't speak hard numbers yet, but these will be affordable, including individual modules. On launch there will likely be bundles available for a controller body, faceplate, and the default modules.
+          <br>
+          <br>
+          <b>• Default Modules?</b><br>
+          <br>
+          - The default modules are: 2 Joysticks, 1 D-Pad, and one Face-buttons module
+          <br>
+          <br>
+          <b>• Why does it look like an Xbox controller? Will other body shapes be available?</b><br>
+          <br>
+          - Other body shapes are planned, and the shape will almost certainly change. While making the graphics used in this site, an Xbox controller was used as the base, just to make things simpler for our artist. It also demonstrates the idea very well.
+          <br>
+          <br>
+          <b>• I want Gamecube buttons!</b><br>
+          <br>
+          - That's planned! Or at least an equivalent. Did you know that Gamecube face buttons actually take up quite a bit more space than standard face buttons?
+          <br>
+          <br>
+          <b>• This site performs badly!</b><br>
+          <br>
+          - Adoline here, I know. I know how to fix it too, but it would require a rewrite from the ground up, I will do it! Just, not now.<br>
+          ~ Ado
+          <br>
+          <br>
+          <b>• Mobile version when?</b><br>
+          <br>
+          - Whenever I get around to rewriting the site from the ground up, I know that's an unsatisfactory answer! I really am sorry for that, but if I look at this site anymore I'm going to lose my mind.<br>
+          ~ Ado
+          <br>
+          <br>
+          <b>• My question isn't listed!</b><br>
+          <br>
+          - Do not fret friend! Feel free to message us on our <u style="cursor: pointer;" onclick="MenuBarButtonNav(-300)">contact</u> page!<br>
+          <br>
+          <b>If we get enough of the same question asked we'll add it here!</b>
+          <br>
+          <br>
+        </h4>
+      </div>
+    </div>
+    </div>
+  <p class="disclaimer">*Design is subject to change. Controller shape, colors, parts, and functionality are not final.</p>
 </div> <!-- End of main-content-3 -->
 
 <div onwheel="ScrollCheck(event)" id="main-content-4">
