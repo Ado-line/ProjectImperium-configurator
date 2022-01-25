@@ -3,6 +3,9 @@ var adoURL = import("./Ado-URL_V1.js")
 
 var loaContainer = document.getElementById('loa-container');
 var loaImage = document.getElementById('loa-image');
+var loaText1 = document.getElementById('loa-text1');
+var loaText2 = document.getElementById('loa-text2');
+var loaButton = document.getElementById('loa-button');
 var menuBar = document.getElementById('menu-bar');
 var homeButton = document.getElementById('home-button');
 var designButton = document.getElementById('design-button');
@@ -53,15 +56,6 @@ function InRange(x, min, max) {
   return x >= min && x <= max;
 }
 
-function LoaAnim() {
-  loaContainer.style['pointer-events'] = "all";
-  loaContainer.style.left = "0vw";
-  setTimeout(function() {
-    loaContainer.style['pointer-events'] = "none";
-    loaContainer.style.opacity = "0.0";
-    loaImage.style.opacity = "0.0";
-  }, 550);
-}
 
 function MouseCheckEnter() {
   navIndicator.style.opacity = "0.0";
@@ -427,8 +421,28 @@ function ScrollCheck(event) {
   SlideMove(scrollDi)
 }
 
+function detectMobile() {
+  const toMatch = [
+    /Android/i,
+    /webOS/i,
+    /iPhone/i,
+    /iPad/i,
+    /iPod/i,
+    /BlackBerry/i,
+    /Windows Phone/i,
+  ];
+
+  return toMatch.some((toMatchItem) => {
+    return navigator.userAgent.match(toMatchItem);
+  });
+}
+
 function SlideURL() {
-  if (InRange(parseInt(URL_GetHash()), 0, 3)) {
+  if (detectMobile()) {
+    mainBody.style.opacity = "1.0";
+    LoaAnim("mobile");
+  } else {
+    if (InRange(parseInt(URL_GetHash()), 0, 3)) {
     switch(String(URL_GetHash())){
       case "0":
         mainBody.style.opacity = "1.0";
@@ -437,13 +451,51 @@ function SlideURL() {
         break;
       default:
         mainBody.style.opacity = "1.0";
-        LoaAnim();
+        LoaAnim("normal");
         url_slide_set = URL_GetHash();
         MenuBarButtonNav(parseInt(url_slide_set) * (-100));
         break;
+      }
+    } else {
+      mainBody.style.opacity = "1.0";
+      return;
+      }
     }
-  } else {
-    mainBody.style.opacity = "1.0";
-    return;
+  }
+
+function MobileCheck() {
+}
+
+
+function LoaAnim(whichAnim) {
+  switch (whichAnim) {
+    case "normal":
+      loaContainer.style['pointer-events'] = "all";
+      loaContainer.style.left = "0vw";
+      setTimeout(function() {LoaAnim("close")}, 550);
+      break;
+    case "close":
+      loaContainer.style['pointer-events'] = "none";
+      loaContainer.style.opacity = "0.0";
+      loaImage.style.opacity = "0.0";
+      loaText1.style['pointer-events'] ="none";
+      loaText2.style['pointer-events'] ="none";
+      loaText1.style.opacity ="0.0";
+      loaText2.style.opacity ="0.0";
+      setTimeout(function() {loaContainer.style.left = "0vw"}, 200);
+      break;
+    case "mobile":
+      loaContainer.style['pointer-events'] = "all";
+      loaText1.style['pointer-events'] ="all";
+      loaText2.style['pointer-events'] ="all";
+      loaContainer.style.left = "0vw";
+      loaContainer.style.opacity = "1.0";
+      loaImage.style.opacity = "1.0";
+      loaText1.style.opacity ="1.0";
+      loaText2.style.opacity ="1.0";
+      break;
+    default:
+      console.error("Function LoaAnim() recieved bad parameter!");
+      console.error(whichAnim)
   }
 }

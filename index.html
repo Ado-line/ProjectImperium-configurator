@@ -9,10 +9,12 @@
     <title>Project Imperium</title>
     <link rel="shortcut icon" href="img/ProjectImperiumLogo.svg" type="image/x-icon">
   </head>
-  <body onload="initAttention(); URLChecker(); SlideURL();">
+  <body onload="initAttention(); URLChecker(); SlideURL(); MobileCheck();">
     <div id="background-div"></div>
     <div id="loa-container">
       <div id="loa-image"><img src="img/ProjectImperiumLogo.svg"></div>
+      <div id="loa-text1"><h2>The mobile version of this site is not ready yet.</h2></div>
+      <div id="loa-text2"><h2 onclick="LoaAnim('close');" id="loa-button">Continue Anyways?</h2></div>
     </div>
       <div id="menu-bar">
           <div id="home-button" class="menu-button" onclick="MenuBarButtonNav(0)">
@@ -226,7 +228,7 @@
         <br>
         • The device will have it's own firmware, rather than relying on the host device, this allows for customization between devices.<br>
         <br>
-        • It will likely use an RP 4080 chip, which supports wireless functionality and has a blazingly fast [INSERT CLOCK SPEED HERE] clock speed.<br>
+        • It will likely use an RP 2080 chip, which has a blazingly fast 133 MHz clock speed.<br>
         <br>
         • We even have plans for sillier modules, just to demonstrate the concept to it's fullest potential.
       </h4>
